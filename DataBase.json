@@ -60,6 +60,16 @@
       "name":"Mobiles",
       "image":"https://www.gizbot.com/images/2019-02/vivo-u1_155107538060.jpg",
       "id":1
+    },
+    {
+      "name":"Dress",
+      "image":"https://media.istockphoto.com/id/1293366109/photo/this-one-match-perfect-with-me.jpg?s=612x612&w=0&k=20&c=wJ6yYbRrDfdmoViuQkX39s2z_0lCiNQYgEtLU--0EbY=",
+      "id":2
+    },
+    {
+      "name":"Shoes",
+      "image":"https://images.pexels.com/photos/19090/pexels-photo.jpg?cs=srgb&dl=pexels-web-donut-19090.jpg&fm=jpg",
+      "id":3
     }
 
   ],
@@ -68,37 +78,81 @@
 "SubCategory": [
   {
     "category":"Jewels",
-    "image":"",
-    "name":"Ring",
+    "subcategory":"Bangles",
     "id":0
 
   },
   {
     "category":"Jewels",
-    "image":"",
-    "name":"Necklace",
+    "subcategory":"Necklace",
     "id":1
 }, 
 {
   "category":"Jewels",
-  "image":"",
-  "name":"Earings",
+  "subcategory":"Ring",
   "id":2
-},
+}, 
 {
-  "category":"Mobiles",
-  "image":"",
-  "name":"Oppo A78 5G",
+  "category":"Jewels",
+  "subcategory":"Earings",
   "id":3
 },
+
+
 {
   "category":"Mobiles",
-  "image":"",
-  "name":"Oppo A74 5G",
+  "subcategory":"Redmi",
   "id":4
+},
+{
+  "category":"Mobiles",
+  "subcategory":"Oppo",
+  "id":5
+},
+{
+  "category":"Mobiles",
+  "subcategory":"Samsung",
+  "id":6
+},
+{
+  "category":"Mobiles",
+  "subcategory":"Vivo",
+  "id":7
+},
+
+
+{
+  "category":"Dress",
+  "subcategory":"DressMen",
+  "id":8
+},
+{
+  "category":"Dress",
+  "subcategory":"DressWomen",
+  "id":9
+},
+{
+  "category":"Dress",
+  "subcategory":"DressKids",
+  "id":10
+},
+
+
+{
+  "category":"Shoes",
+  "subcategory":"ShoesMen",
+  "id":11
+},
+{
+  "category":"Shoes",
+  "subcategory":"ShoesWomen",
+  "id":12
+},
+{
+  "category":"Shoes",
+  "subcategory":"ShoesKids",
+  "id":13
 }
-
-
 
 ],
 
@@ -106,207 +160,231 @@
     {
       "id": 1,
       "category": "Jewels",
-      "SubCategory":"Bangle",
+      "SubCategory":"Bangles",
       "name": "Kagan Bangle",
       "price": 699,
       "desc": "Kagan Bangles, New Model made in India, With White and Green stoned worked bangle, and also with fine cutting work",
-      "image": "/Assets/ProductCategory/Jewels/Bangles/Bangle1.jpg"
+      "image": "https://cdn.shopify.com/s/files/1/0232/5737/products/ABX0059XM_1200x.jpg?v=1581598691"
     },
     {
       "id": 2,
       "category": "Jewels",
-      "name": "Slim Golden Bangle",
-      "price": 496,
-      "desc": "Slim Golden Bangle with simple designing work, fine finishing work eith fine cutting and can be used for normal purpose",
-      "image": "/Assets/ProductCategory/Jewels/Bangles/Bangle2.jpg"
+      "SubCategory":"Bangles",
+      "name": "SCrystal Bangle Bracelet for Women and Girls",
+      "price": 280,
+      "desc": "Valentine Gift By Shining Diva Fashion 18k Crystal Bangle Bracelet for Women and Girls (Rose Gold)",
+      "image": "https://m.media-amazon.com/images/I/51Q8ISqvWRL._UY695_.jpg"
     },
     {
       "id": 3,
       "category": "Jewels",
-      "name": "Kadiyam",
-      "price": 699,
-      "desc": "Kadiyam, a simple unique bangle ever,unique look with extra ordinary finishing work and pure gold with all the fine finishing work",
-      "image": "/Assets/ProductCategory/Jewels/Bangles/Bangle5.jpeg"
+      "SubCategory":"Bangles",
+      "name": "GURJARI JEWELLERS",
+      "price": 299,
+      "desc": "GURJARI JEWELLERS Oxidised 4 Bangles with Turquoise,Evileye,Gungru Beads Charm Bangles Set",
+      "image": "https://m.media-amazon.com/images/I/71OWX1pPPDL._UX695_.jpg"
     },
     {
       "id": 4,
       "category": "Jewels",
-      "name": "Kagan Bangles",
+      "SubCategory":"Bangles",
+      "name": "Sasitrends Oxidized Silver Bangles",
       "price": 599,
-      "desc": "Kagan Bangles, Bangle With Red Stone work at the centered, gives the great look and new model manufactured at China,great look ever",
-      "image": "/Assets/ProductCategory/Jewels/Bangles/Bangle4.jpeg"
+      "desc": "Sasitrends Oxidized Silver and Bangles for Women & Girls,Store in air tight pouches, Keep away from deodorants and perfumes",
+      "image": "https://m.media-amazon.com/images/I/81xquKWFRTL._UY695_.jpg"
     },
     {
       "id": 5,
       "category": "Jewels",
-      "name": "Golden-Red Bangles",
-      "price": 799,
-      "desc": "Golden Red Bangles,one of the best fit for party wears and gives a grant look ever,all sizes are available",
-      "image": "/Assets/ProductCategory/Jewels/Bangles/Bangle6.jpeg"
+      "SubCategory":"Bangles",
+      "name": "Colourful Metal Bangles",
+      "price": 500,
+      "desc": "NMII Non- precious Metal and Zircon Gemstone with Golden Chain work Bangles for Women / Girls",
+      "image": "https://m.media-amazon.com/images/I/81ahBIH9owL._UX695_.jpg"
     },
     {
       "id": 6,
       "category": "Jewels",
-      "name": "Emerald Uncut Bangles",
-      "price": 599,
-      "desc": "Emerald Uncut Bangles, one of the Cheap and best bangle with high quality and great finishing work and also is manufactured from Singapore.",
-      "image": "/Assets/ProductCategory/Jewels/Bangles/Bangle3.jpeg"
+      "SubCategory":"Bangles",
+      "name": "Simple Golden Bangle",
+      "price": 314,
+      "desc": "Shining Diva Fashion Latest One Gram Gold Plated Set of 8 Traditional Bangles for Women and Girls",
+      "image": "https://m.media-amazon.com/images/I/81LWpXfWICL._UY695_.jpg"
     },
+
+
     {
       "id": 7,
       "category": "Jewels",
-      "name": "Golden with pearls",
+      "SubCategory":"Necklace",
+      "name": " Gold Plated Peacock Pendant Necklace",
       "price": 999,
-      "desc": "Golden With Pearls, attractive necklace,availability is limited,Made in India,Excellent Party Wear",
-      "image": "/Assets/ProductCategory/Jewels/Necklace/Necklace1.jpg"
+      "desc": "Sasitrends One Gram Micro Gold Plated Peacock Pendant Necklace Set for Women and Girls",
+      "image": "https://m.media-amazon.com/images/I/81+TTvENyxS._UY695_.jpg"
     },
     {
       "id": 8,
       "category": "Jewels",
-      "name": "V-shaped Necklace",
-      "price": 899,
-      "desc": "V-shaped Necklace, attractive necklace,availability is limited,Made in India,Excellent Party Wear",
-      "image": "/Assets/ProductCategory/Jewels/Necklace/Necklace2.jpeg"
+      "SubCategory":"Necklace",
+      "name": "Gold Plated Pearl Studded Necklace ",
+      "price": 399,
+      "desc": "YouBella Jewellery Sets for Women Gold Plated Pearl Studded Necklace Jewellery Set with Earrings for Girls/Women",
+      "image": "https://m.media-amazon.com/images/I/61Yf6Gbl-fL._UY695_.jpg"
     },
     {
       "id": 9,
       "category": "Jewels",
-      "name": "Lakshmi Necklace",
-      "price": 1599,
-      "desc": "Lakshmi Dollared Necklace, attractive necklace,availability is limited,Made in India,Excellent Party Wear",
-      "image": "/Assets/ProductCategory/Jewels/Necklace/Necklace3.jpg"
+      "SubCategory":"Necklace",
+      "name": "Gold Plated Peacock Necklace",
+      "price": 989,
+      "desc": "Sasitrends One Gram Micro Gold Plated Peacock Pendant Necklace Set for Women and Girls",
+      "image": "https://m.media-amazon.com/images/I/81uaCBR1dyL._UY695_.jpg"
     },
     {
       "id": 10,
       "category": "Jewels",
-      "name": "Diamond Necklace",
-      "price": 123599,
-      "desc": "Golden With Pearls, attractive diamond necklace,availability is limited,Made in India,Excellent Party Wear",
-      "image": "/Assets/ProductCategory/Jewels/Necklace/Necklace4.jpeg"
+      "SubCategory":"Necklace",
+      "name": "Flower Necklace",
+      "price": 739,
+      "desc": "Sasitrends One Gram Micro Gold Plated Flower Necklace for Women and Girls",
+      "image": "https://m.media-amazon.com/images/I/71Jqvpre64L._UX695_.jpg"
     },
     {
       "id": 11,
       "category": "Jewels",
-      "name": "Green Diamond Necklace",
-      "price": 261599,
-      "desc": "Green Diamond Necklace, attractive necklace,availability is limited,Made in India,Excellent Party Wear",
-      "image": "/Assets/ProductCategory/Jewels/Necklace/Necklace6.jpeg"
+      "SubCategory":"Necklace",
+      "name": "Glass Necklace",
+      "price": 309,
+      "desc": "Dca Glass Necklace for Women",
+      "image": "https://m.media-amazon.com/images/I/71yq60hVKuL._UY695_.jpg"
     },
     {
       "id": 12,
       "category": "Jewels",
-      "SubCategory":"Ring",
-      "name": "Golden Diamond",
-      "price": 48599,
-      "desc": "Golen Diamond Necklace, attractive necklace,availability is limited,Made in India,Excellent Party Wear",
-      "image": "/Assets/ProductCategory/Jewels/Necklace/Necklace5.jpeg"
+      "SubCategory":"Necklace",
+      "name": "German Silver Necklace",
+      "price": 699,
+      "desc": "Sasitrends Oxidised German Silver Necklace with Jumki for Women and Girls",
+      "image": "https://m.media-amazon.com/images/I/814z+RLXnNL._SY695._SX._UX._SY._UY_.jpg"
     },
+
+
     {
       "id": 13,
       "category": "Jewels",
       "SubCategory":"Ring",
-      "name": "Golden Ring",
-      "price": 21599,
-      "desc": "",
-      "image": "/Assets/ProductCategory/Jewels/Ring/Ring1.jpg"
+      "name": "Adjustable Finger Ring",
+      "price": 399,
+      "desc": "Fashion Frill Women's Ring Butterfly Design Silver Plated Adjustable Finger Ring",
+      "image": "https://m.media-amazon.com/images/I/61wgfE59WCL._UY695_.jpg"
     },
     {
       "id": 14,
       "category": "Jewels",
       "SubCategory":"Ring",
-      "name": "Silver Ring",
-      "price": 2599,
-      "desc": "",
-      "image": "/Assets/ProductCategory/Jewels/Ring/Ring2.jpg"
+      "name": "Silver and Gold Combo Ring",
+      "price": 245,
+      "desc": "Fashion Frill Exclusive Lovable Stainless Steel Hug Ring ",
+      "image": "https://m.media-amazon.com/images/I/71+chB1YlBL._UY695_.jpg"
     },
     {
       "id": 15,
       "category": "Jewels",
       "SubCategory":"Ring",
-      "name": "Copper mixed Gold Ring",
-      "price": 24599,
-      "desc": "",
-      "image": "/Assets/ProductCategory/Jewels/Ring/Ring3.jpeg"
+      "name": "Diamond Ring",
+      "price": 27599,
+      "desc": "Gannu Diamonds Gold and Diamond Ring for Womens",
+      "image": "https://m.media-amazon.com/images/I/51N8xySvvML._UX695_.jpg"
     },
     {
       "id": 16,
       "category": "Jewels",
       "SubCategory":"Ring",
-      "name": "Simple Gold Ring",
-      "price": 25199,
-      "desc": "",
-      "image": "/Assets/ProductCategory/Jewels/Ring/Ring4.jpg"
+      "name": "Yellow Chimes Ring",
+      "price": 259,
+      "desc": "Yellow Chimes Exclusive Silver Plated Crystal studded with Cubic Zircon Ring ",
+      "image": "https://m.media-amazon.com/images/I/31JyvdLbQkL.jpg"
     },
     {
       "id": 17,
       "category": "Jewels",
       "SubCategory":"Ring",
-      "name": "Diamond Ring",
-      "price": 56599,
-      "image": "/Assets/ProductCategory/Jewels/Ring/Ring5.jpeg"
+      "name": " Brass and Cubic Zirconia Adjustable Ring ",
+      "price": 192,
+      "desc":"Jewels Galaxy Love Collection Brass and Cubic Zirconia Adjustable Ring",
+      "image": "https://m.media-amazon.com/images/I/51NYMAm0OuL._UY695_.jpg"
     },
     {
       "id": 18,
       "category": "Jewels",
       "SubCategory":"Ring",
-      "name": "Silver Offer Ring",
-      "price": 2599,
-      "desc": "",
-      "image": "/Assets/ProductCategory/Jewels/Ring/Ring6.jpg"
+      "name": "Silver Adjustable Ring",
+      "price": 1199,
+      "desc": "CLARA Pure Real 925 Sterling Silver Adjustable Ring Band Gift for Women and Girls",
+      "image": "https://m.media-amazon.com/images/I/51-v+NkoDNS._UY695_.jpg"
     },
+
+
     {
       "id": 19,
       "category": "Jewels",
-      "name": "Black Metal Earing",
-      "price": 599,
-      "desc": "",
-      "image": "/Assets/ProductCategory/Jewels/Earings/E1.jpg"
+      "SubCategory":"Earings",
+      "name": "YouBella Earings",
+      "price": 197,
+      "desc": "YouBella Jewellery Bohemian Multi-Color Earrings for Girls and Women",
+      "image": "https://m.media-amazon.com/images/I/710dnChlpcS._UY695_.jpg"
     },
     {
       "id": 20,
       "category": "Jewels",
-      "name": "Silver Earing",
-      "price": 599,
-      "desc": "",
-      "image": "/Assets/ProductCategory/Jewels/Earings/E2.jpg"
+      "SubCategory":"Earings",
+      "name": "Triple Hoop Earings",
+      "price": 199,
+      "desc": "SubhagAlankar Golden Triple Hoop Earrings For Women",
+      "image": "https://m.media-amazon.com/images/I/61X9myCnZFL._UY695_.jpg"
     },
     {
       "id": 21,
       "category": "Jewels",
-      "name": "Flower Earing",
-      "price": 599,
-      "desc": "",
-      "image": "/Assets/ProductCategory/Jewels/Earings/E3.jpg"
+      "SubCategory":"Earings",
+      "name": "Crystal Stud Earrings - Silver",
+      "price": 179,
+      "desc": "Shining Diva Fashion Women's Silver Plated Platinum Plated Stylish Crystal Stud Earrings",
+      "image": "https://m.media-amazon.com/images/I/419WruRQEoL.jpg"
     },
     {
       "id": 22,
       "category": "Jewels",
-      "name": "New Rounded Earing",
+      "SubCategory":"Earings",
+      "name": "Silver Twisted Earrings With Pearl Drops",
       "price": 599,
       "desc": "",
-      "image": "/Assets/ProductCategory/Jewels/Earings/E6.jpg"
+      "image": "https://m.media-amazon.com/images/I/71tfRVUQCXL._UY695_.jpg"
     },
     {
       "id": 23,
       "category": "Jewels",
-      "name": "Golden Earing",
-      "price": 599,
-      "desc": "",
-      "image": "/Assets/ProductCategory/Jewels/Earings/E9.jpeg"
+      "SubCategory":"Earings",
+      "name": "Golden Pink Jhumkas ",
+      "price": 259,
+      "desc": "Fashion Frill Mesmerizing Traditional Gold Plated Floral Golden Pink Jhumkas Pearl Studded Earrings For Women Girls",
+      "image": "https://m.media-amazon.com/images/I/916DgT0z7BL._UY695_.jpg"
     },
     {
       "id": 24,
       "category": "Jewels",
-      "name": "Green Pink Combo Earing",
-      "price": 599,
-      "desc": "",
-      "image": "/Assets/ProductCategory/Jewels/Earings/E14.jpg"
+      "SubCategory":"Earings",
+      "name": "Gold Plated Floral Earrings",
+      "price": 220,
+      "desc": "YouBella Jewellery Gold Plated Floral Earrings for Girls and Women",
+      "image": "https://m.media-amazon.com/images/I/51KQ-C5qhIS._UY695_.jpg"
     },
 
 
     {
       "id": 25,
-      "category": "Redmi",
+      "category": "Mobiles",
+      "SubCategory":"Redmi",
       "name": "Redmi Note 12 5G",
       "price": 17999,
       "desc": "Redmi Note 12 5G Matte Black 4GB RAM 128GB ROM | 1st Phone with 120Hz Super AMOLED and Snapdragon® 4 Gen 1 | 48MP AI Triple Camera",
@@ -314,7 +392,8 @@
     },
     {
       "id": 26,
-      "category": "Redmi",
+      "category": "Mobiles",
+      "SubCategory":"Redmi",
       "name": "Redmi Note 11 Pro+",
       "price": 19999,
       "desc": "Redmi Note 11 Pro+ 5G , 6GB+128GB, Mirage Blue",
@@ -322,7 +401,8 @@
     },
     {
       "id": 27,
-      "category": "Redmi",
+      "category": "Mobiles",
+      "SubCategory":"Redmi",
       "name": "Redmi Note 10 Pro",
       "price": 18999,
       "desc": "Xiaomi Redmi Note 10 Pro 128 GB (Dark Nebula, 6 GB RAM)",
@@ -330,7 +410,8 @@
     },
     {
       "id": 28,
-      "category": "Redmi",
+      "category": "Mobiles",
+      "SubCategory":"Redmi",
       "name": "Redmi Note 10",
       "desc": "Redmi Note 10 (Dark Black , 8GB,128 GB",
       "price": 13999,
@@ -338,7 +419,8 @@
     },
     {
       "id": 29,
-      "category": "Redmi",
+      "category": "Mobiles",
+      "SubCategory":"Redmi",
       "name": "Redmi Note 9",
       "price": 12599,
       "desc": "Redmi Note 9,Light Blue,6GB,256 GB",
@@ -346,15 +428,19 @@
     },
     {
       "id": 30,
-      "category": "Redmi",
+      "category": "Mobiles",
+      "SubCategory":"Redmi",
       "name": "Redmi Note 9 Prime",
       "price": 13599,
       "desc": "Redmi Note 9 Prime,Light Purple, 8GB , 256GB",
       "image": "/Assets/ProductCategory/Mobiles/Redmi/Redmi9Prime.jpg"
     },
+
+
     {
       "id": 31,
-      "category": "Oppo",
+      "category": "Mobiles",
+      "SubCategory":"Redmi",
       "name": "Oppo Reno6 5G",
       "price": 36790,
       "desc": "Oppo Reno6 5G, 8GB + 128GB Storage Phone (Black,12GB RAM,256GB Storage), Medium (CPH2249)",
@@ -362,7 +448,8 @@
     },
     {
       "id": 32,
-      "category": "Oppo",
+      "category": "Mobiles",
+      "SubCategory":"Oppo",
       "name": "Oppo A78 5G",
       "price": 21999,
       "desc": "Oppo A78 5G (Glowing Black,8GB RAM, 128GB Storage),Item Model Number-CPH2495",
@@ -370,7 +457,8 @@
     },
     {
       "id": 33,
-      "category": "Oppo",
+      "category": "Mobiles",
+      "SubCategory":"Oppo",
       "name": "Oppo K10",
       "price": 18595,
       "desc": "Oppo K10, 8GB + 128GB Storage Phone (Black Carbon, 5000 mAh Lithium Ion Polymer Battery,Item Model Number-CPH2337",
@@ -378,7 +466,8 @@
     },
     {
       "id": 34,
-      "category": "Oppo",
+      "category": "Mobiles",
+      "SubCategory":"Oppo",
       "name": "Oppo F11 Pro",
       "price": 21989,
       "desc": "Oppo F11 Pro, 8GB + 128GB Storage Phone (Green,6GB RAM,256GB Storage),CPH1969",
@@ -386,7 +475,8 @@
     },
     {
       "id": 35,
-      "category": "Oppo",
+      "category": "Mobiles",
+      "SubCategory":"Oppo",
       "name": "Oppo F15",
       "price": 12252,
       "desc": "Oppo F15, 8GB + 128GB Storage Phone (Light Carbon Black,8GB RAM,128GB Storage),CPH2342",
@@ -394,15 +484,19 @@
     },
     {
       "id": 36,
-      "category": "Oppo",
+      "category": "Mobiles",
+      "SubCategory":"Oppo",
       "name": "Oppo F21 Pro Plus",
       "price": 27999,
       "desc": "Oppo F21 Pro, 8GB + 128GB Storage Phone (Sunset Orange,8GB RAM,128GB Storage),CPH3467",
       "image": "/Assets/ProductCategory/Mobiles/Oppo/OppoF21.jpg"
     },
+
+
     {
       "id": 37,
-      "category": "Samsung",
+      "category": "Mobiles",
+      "SubCategory":"Samsung",
       "name": "Samsung Galaxy S22",
       "price": 106999,
       "desc": "Samsung Galaxy S22 Ultra 5G (Burgundy, 12GB, 256GB Storage)",
@@ -410,7 +504,8 @@
     },
     {
       "id": 38,
-      "category": "Samsung",
+      "category": "Mobiles",
+      "SubCategory":"Samsung",
       "name": "Samsung Galaxy M53",
       "price": 25999,
       "desc": "Samsung Galaxy M53 5G (Charcoal Black, 8GB, 128GB Storage)",
@@ -418,7 +513,8 @@
     },
     {
       "id": 39,
-      "category": "Samsung",
+      "category": "Mobiles",
+      "SubCategory":"Samsung",
       "name": "Samsung Galaxy A14",
       "price": 16499,
       "desc": "Samsung Galaxy A14,Light Green,5G,4GB|64GB",
@@ -426,15 +522,19 @@
     },
     {
       "id": 40,
-      "category": "Samsung",
+      "category": "Mobiles",
+      "SubCategory":"Samsung",
       "name": "Samsung Galaxy S21",
       "price": 83999,
       "desc": "Samsung Galaxy S21 5G (Phantom Violet, 8GB, 128GB Storage)",
       "image": "https://images.samsung.com/is/image/samsung/assets/uk/2201/preorder/1_image_carousel/4_product_image/S21FE_Carousel_ProductImage_Lavender_MO.jpg"
     },
+
+
     {
       "id": 41,
-      "category": "Vivo",
+      "category": "Mobiles",
+      "SubCategory":"Vivo",
       "name": "Vivo Y22",
       "price": 16499,
       "desc": "Vivo Y22, 8GB + 128GB Storage Phone (Sunset Orange,8GB RAM,128GB Storage),CPH3467",
@@ -442,7 +542,8 @@
     },
     {
       "id": 42,
-      "category": "Vivo",
+      "category": "Mobiles",
+      "SubCategory":"Vivo",
       "name": "Vivo Y33s",
       "price": 18490,
       "desc": "VIVO Y33S (MIDDAY DREAM, 8GB RAM, 128GB STORAGE)",
@@ -450,7 +551,8 @@
     },
     {
       "id": 43,
-      "category": "Vivo",
+      "category": "Mobiles",
+      "SubCategory":"Vivo",
       "name": "Vivo Y35",
       "price": 18999,
       "desc": "Vivo Y35 (Dawn Gold, 8GB RAM, 128GB Storage)",
@@ -458,7 +560,8 @@
     },
     {
       "id": 44,
-      "category": "Vivo",
+      "category": "Mobiles",
+      "SubCategory":"Vivo",
       "name": "Vivo V23",
       "price": 15990,
       "desc": "Vivo V23 5G (Stardust Black, 12GB RAM) (256GB Storage)",
@@ -466,7 +569,8 @@
     },
     {
       "id": 45,
-      "category": "Vivo",
+      "category": "Mobiles",
+      "SubCategory":"Vivo",
       "name": "Vivo T1 5G",
       "price": 16990,
       "desc": "Vivo T1 5G (Rainbow Fantasy, 6GB, 128GB)",
@@ -474,15 +578,20 @@
     },
     {
       "id": 46,
-      "category": "Vivo",
+      "category": "Mobiles",
+      "SubCategory":"Vivo",
       "name": "Vivo X80",
       "price": 76990,
       "desc": "Vivo X80 Pro 256GB (Cosmic Black,12GB RAM)",
       "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSlmYb3Mf_Bg522nyNIjxl2xieyEK-1bYNlnN7uB-WckOrWjx9agzAuy0twwjnVV9xKeywn3XCp5bpUsgmXdS1a4KpaiWj6CeyTMlYsYVnQ2Z4Yo0avrC_ZRg&usqp=CAE"
     },
+
+
+    
     {
       "id": 47,
-      "category": "ShoeMen",
+      "category": "Shoes",
+      "SubCategory":"ShoesMen",
       "name": "Casual Shoe For Men",
       "price": 1990,
       "desc": "Casual Shoe For Men - Black and White Casual & Flat Shoes",
@@ -490,7 +599,8 @@
     },
     {
       "id": 48,
-      "category": "ShoeMen",
+      "category": "Shoes",
+      "SubCategory":"ShoesMen",
       "name": "Casual Shoe for Men",
       "price": 490,
       "desc": "Brown coloured smooth casual wear for men, warranty upto one years of purchase ",
@@ -498,7 +608,8 @@
     },
     {
       "id": 49,
-      "category": "ShoeMen",
+      "category": "Shoes",
+      "SubCategory":"ShoesMen",
       "name": "Casual Shoe for Men",
       "price": 1997,
       "desc": "Buy Axter Comfortable Pack of 2 Multicolor Collection of Sports Shoes for Kids & Boys (9293-9316) from Sneakers at Amazon.in. 30 days free exchange",
@@ -506,7 +617,8 @@
     },
     {
       "id": 50,
-      "category": "ShoeMen",
+      "category": "Shoes",
+      "SubCategory":"ShoesMen",
       "name": "Formal Shoe for Mens",
       "price": 749,
       "desc": " Buy Zixer Cargo Synthetic Leather Ankle Formal Shoes Men || Office Shoes For Men Latest Stylish || Chukka Boots Men || Party Wear Long Shoes",
@@ -514,7 +626,8 @@
     },
     {
       "id": 51,
-      "category": "ShoeMen",
+      "category": "Shoes",
+      "SubCategory":"ShoesMen",
       "name": "Formal Shoe for Mens",
       "price": 899,
       "desc": "Black Coloured Mens Formal Shoes- Low price offer.",
@@ -522,15 +635,19 @@
     },
     {
       "id": 52,
-      "category": "ShoeMen",
+      "category": "Shoes",
+      "SubCategory":"ShoesMen",
       "name": "Formal Shoe for Mens",
       "price": 998,
       "desc": "Creamy Leathered Formal Shoes For Men",
       "image": "https://www.faccefelici.com/wp-content/uploads/2021/10/Davis-1-350x350.jpg"
     },
+
+
     {
       "id": 53,
-      "category": "ShoeWomen",
+      "category": "Shoes",
+      "SubCategory":"ShoesWomen",
       "name": "Casual Shoe For Women",
       "price": 444,
       "desc": " Buy Aircity Casual Blue Lightweight Shoes For Girl/Women Sneaker Shoes For Women Slip On Sneakers For Women - Fashion-3_Blue Wmn Casual Shoes",
@@ -538,7 +655,8 @@
     },
     {
       "id": 54,
-      "category": "ShoeWomen",
+      "category": "Shoes",
+      "SubCategory":"ShoesWomen",
       "name": "Casual Shoe For Women",
       "price": 468,
       "desc": "WOMEN CASUAL SHOES, WOMEN WALKING SHOES, WOMEN RUNNING SHOES PURPLE A2",
@@ -546,7 +664,8 @@
     },
     {
       "id": 55,
-      "category": "ShoeWomen",
+      "category": "Shoes",
+      "SubCategory":"ShoesWomen",
       "name": "Casual Shoe For Women",
       "price": 400,
       "desc": "Gucci Golden Bata Ladies Shoes",
@@ -554,7 +673,8 @@
     },
     {
       "id": 56,
-      "category": "ShoeWomen",
+      "category": "Shoes",
+      "SubCategory":"ShoesWomen",
       "name": "Formal Shoe for Women",
       "price": 512,
       "desc": "FASHIMO Formal Bellies Shoes for Women's and Girls MO10…",
@@ -562,7 +682,8 @@
     },
     {
       "id": 57,
-      "category": "ShoeWomen",
+      "category": "Shoes",
+      "SubCategory":"ShoesWomen",
       "name": "Formal Shoe for Women",
       "price": 721,
       "desc": "Footshez Womens Formal Shoes",
@@ -570,15 +691,19 @@
     },
     {
       "id": 58,
-      "category": "ShoeWomen",
+      "category": "Shoes",
+      "SubCategory":"ShoesWomen",
       "name": "Formal Shoe for Women",
       "price": 999,
       "desc": "Womens Marco Tozzi Faux Suede High Heel Court Shoes offer - Buy 1 Get 1 Free",
       "image": "https://i.ebayimg.com/images/g/ZOUAAOSwm5Fic1Zj/s-l500.jpg"
     },
+
+
     {
       "id": 59,
-      "category": "Kids",
+      "category": "Shoes",
+      "SubCategory":"ShoesKids",
       "name": "Kids Shoes",
       "price": 250,
       "desc": "Kids Shoes, Upper Material : Canvas, Cotton Fabric,Genuine Leather, Mesh, PU",
@@ -586,7 +711,8 @@
     },
     {
       "id": 60,
-      "category": "Kids",
+      "category": "Shoes",
+      "SubCategory":"ShoesKids",
       "name": "Kids Shoes",
       "price": 1499,
       "desc": "Buy Nsasy Roller Shoes Kids Roller Skates Shoes Girls Boys Wheels Shoes Become Sport Sneaker with Led for Children ",
@@ -594,7 +720,8 @@
     },
     {
       "id": 61,
-      "category": "Kids",
+      "category": "Shoes",
+      "SubCategory":"ShoesKids",
       "name": "Kids Shoes",
       "price": 699,
       "desc": "Cat Shoes for Girls Quality Promotional Products & Merchandise @ Lowest Price",
@@ -602,7 +729,8 @@
     },
     {
       "id": 62,
-      "category": "Kids",
+      "category": "Shoes",
+      "SubCategory":"ShoesKids",
       "name": "Kids Shoes",
       "price": 399,
       "desc": "Kids Printed Design Fabric Upper Lightweight Shoes - Orange",
@@ -610,7 +738,8 @@
     },
     {
       "id": 63,
-      "category": "Kids",
+      "category": "Shoes",
+      "SubCategory":"ShoesKids",
       "name": "Kids Shoes",
       "price": 475,
       "desc": "White Purpled Shoe for Kids With Great Offer",
@@ -618,15 +747,20 @@
     },
     {
       "id": 64,
-      "category": "Kids",
+      "category": "Shoes",
+      "SubCategory":"ShoesKids",
       "name": "Kids Shoes",
       "price": 199,
       "desc": "These chunky little sliders are a must-have for little feet on the move!",
       "image": "https://mrpg.scene7.com/is/image/MRP/01_100030465_SI_00"
     },
+
+
+
     {
       "id": 65,
-      "category": "DressMen",
+      "category": "Dress",
+      "SubCategory":"DressMen",
       "name": "Men Dress",
       "price": 869,
       "desc": "Men's Business Suit Vest Slim Fit Dress Vest Wedding Waistcoat",
@@ -634,7 +768,8 @@
     },
     {
       "id": 66,
-      "category": "DressMen",
+      "category": "Dress",
+      "SubCategory":"DressMen",
       "name": "Men Dress",
       "price": 725,
       "desc": "Dennis Lingo Men's Solid Slim Fit Cotton Casual Shirt with Spread Collar & Full Sleeves",
@@ -642,7 +777,8 @@
     },
     {
       "id": 67,
-      "category": "DressMen",
+      "category": "Dress",
+      "SubCategory":"DressMen",
       "name": "Men Dress",
       "price": 699,
       "desc": "TLF Men T-Shirt",
@@ -650,7 +786,8 @@
     },
     {
       "id": 68,
-      "category": "DressMen",
+      "category": "Dress",
+      "SubCategory":"DressMen",
       "name": "Men Dress",
       "price": 799,
       "desc": "ONNIX Mens Waistcoat",
@@ -658,7 +795,8 @@
     },
     {
       "id": 69,
-      "category": "DressMen",
+      "category": "Dress",
+      "SubCategory":"DressMen",
       "name": "Men Dress",
       "price": 699,
       "desc": "BLIVE Men's Round Neck Full Sleeve T-Shirt | Printed White T-Shirt",
@@ -666,15 +804,19 @@
     },
     {
       "id": 70,
-      "category": "DressMen",
+      "category": "Dress",
+      "SubCategory":"DressMen",
       "name": "Men Dress",
       "price": 279,
       "desc": "TLF Men T-Shirt",
       "image": "https://m.media-amazon.com/images/I/61kSgS7lwTL._UX679_.jpg"
     },
+
+
     {
       "id": 71,
-      "category": "DressWomen",
+      "category": "Dress",
+      "SubCategory":"DressWomen",
       "name": "Women Dress",
       "price": 789,
       "desc": "KIPEK Women's Cotton Buta Print Anarkali Kurta",
@@ -682,7 +824,8 @@
     },
     {
       "id": 72,
-      "category": "DressWomen",
+      "category": "Dress",
+      "SubCategory":"DressWomen",
       "name": "Women Dress",
       "price": 990,
       "desc": "Vahson Women's Viscose Indo Western Palazzo Pant Saree Set - Blur",
@@ -690,7 +833,8 @@
     },
     {
       "id": 73,
-      "category": "DressWomen",
+      "category": "Dress",
+      "SubCategory":"DressWomen",
       "name": "Women Dress",
       "price": 764,
       "desc": "Velmita Women's Banarasi Cotton Silk Kanjivaram Style Saree With Blouse Piece(Free Size)",
@@ -698,7 +842,8 @@
     },
     {
       "id": 74,
-      "category": "DressWomen",
+      "category": "Dress",
+      "SubCategory":"DressWomen",
       "name": "Women Dress",
       "price": 399,
       "desc": "Sheetal Associates Women's A-Line Maxi Dress",
@@ -706,7 +851,8 @@
     },
     {
       "id": 75,
-      "category": "DressWomen",
+      "category": "Dress",
+      "SubCategory":"DressWomen",
       "name": "Women Dress",
       "price": 999,
       "desc": "Drape & Dresses Women's Pure Chiffon Saree With Blouse Piece",
@@ -714,15 +860,19 @@
     },
     {
       "id": 76,
-      "category": "DressWomen",
+      "category": "Dress",
+      "SubCategory":"DressWomen",
       "name": "Women Dress",
       "price": 569,
       "desc": "GoSriKi Women Kurta With Dupatta",
       "image": "https://m.media-amazon.com/images/I/61Ov56SdKVS._UX679_.jpg"
     },
+
+
     {
       "id": 77,
-      "category": "DressKids",
+      "category": "Dress",
+      "SubCategory":"DressKids",
       "name": "Kids Dress",
       "price": 549,
       "desc": "Fashion Dream Girls Calf Length Pleated Dress",
@@ -730,7 +880,8 @@
     },
     {
       "id": 78,
-      "category": "DressKids",
+      "category": "Dress",
+      "SubCategory":"DressKids",
       "name": "Kids Dress",
       "price": 1099,
       "desc": "Princess Ball Gown Wedding Dress",
@@ -738,7 +889,8 @@
     },
     {
       "id": 79,
-      "category": "DressKids",
+      "category": "Dress",
+      "SubCategory":"DressKids",
       "name": "Kids Dress",
       "price": 399,
       "desc": "Fashion Dream Girls Crepe Floral Printed Calf Length Dress",
@@ -746,7 +898,8 @@
     },
     {
       "id": 80,
-      "category": "DressKids",
+      "category": "Dress",
+      "SubCategory":"DressKids",
       "name": "Kids Dress",
       "price": 409,
       "desc": "Vesham Boy's Silk Kurta Pajama",
@@ -754,7 +907,8 @@
     },
     {
       "id": 81,
-      "category": "DressKids",
+      "category": "Dress",
+      "SubCategory":"DressKids",
       "name": "Kids Dress",
       "price": 679,
       "desc": "Bold N Elegant - Be Bold Inside & Elegant Outside Baby's Cotton Tshirt Pant Set",
@@ -762,22 +916,14 @@
     },
     {
       "id": 82,
-      "category": "DressKids",
-      "SubCategory":"Dress",
+      "category": "Dress",
+      "SubCategory":"DressKids",
       "name": "Kids Dress",
       "price": 609,
       "desc": "Hopscotch Boys Overall & Dress Sets",
       "image": "https://m.media-amazon.com/images/I/51xX3J8yjcS._UX679_.jpg"
-    },
-    {
-      "id": 83,
-      "category": "Jewels",
-      "SubCategory":"Ring",
-      "name": "Golden Diamond",
-      "price": 48599,
-      "desc": "Golen Diamond Necklace, attractive necklace,availability is limited,Made in India,Excellent Party Wear",
-      "image": "/Assets/ProductCategory/Jewels/Necklace/Necklace5.jpeg"
     }
+
   ]
 }
 

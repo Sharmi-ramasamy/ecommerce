@@ -23,28 +23,28 @@ const response= await axios.get("http://localhost:4042/ProductItems")
 setGetproduct(response.data)
 }
 
-const catego=params.id;
-const [catname,setcatname]=useState("Dress");
+const categoryName=params.id;
+const [categoryname,setcategoryname]=useState([]);
 const [getproduct,setGetproduct]=useState([]);
   return (
     <>
-{/* {catego} */}
-{/* {catname} */}
+{/* {categoryName} */}
+{/* {categoryname} */}
 <div className="wrapper">
 <div>
-    {items.filter((e)=>{
-        if(catego==e.category){
-            return e
+    {items.filter((categoryItem)=>{
+        if(categoryName==categoryItem.category){
+            return categoryItem
         }
     }).map((val)=>(<div key={val.id}> 
-    <button id="buttons" onClick={()=>setcatname(val.name)}>{val.name}</button></div>))}
+    <button id="buttons" onClick={()=>setcategoryname(val.subcategory)}>{val.subcategory}</button></div>))}
 
 </div>
      
        <div className='products'>
 
-            {getproduct.filter((e)=>{if(catname==e.SubCategory){
-                return e
+            {getproduct.filter((subcategoryitem)=>{if(categoryname==subcategoryitem.SubCategory){
+                return subcategoryitem
             }}).map((productItem)=>(
                 <div key={productItem.id} className='productcards'>
                     <div>

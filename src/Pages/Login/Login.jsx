@@ -28,7 +28,7 @@ export default function Login() {
 
   const handleSubmit=(event) =>{
     event.preventDefault();
-    axios.get("http://localhost:4040/user?email="+useremail).then((res)=>{
+    axios.get("http://localhost:4042/user?email="+useremail).then((res)=>{
        if(res.data[0].password == userpassword){
         setIsLoggedin(true)
         sessionStorage.setItem("id",res.data[0].id)

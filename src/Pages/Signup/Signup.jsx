@@ -37,7 +37,7 @@ export default function Signup() {
     const handleSubmit = (event) => {
         event.preventDefault();
         let user = { name, email, password }
-        axios.post("http://localhost:4040/user", user).then((res) => {
+        axios.post("http://localhost:4042/user", user).then((res) => {
             if (res.data[0].password == password) {
                 setIsLoggedin(true)
                 sessionStorage.setItem("id", res.data[0].id)

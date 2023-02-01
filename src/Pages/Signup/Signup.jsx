@@ -37,16 +37,16 @@ export default function Signup() {
     const handleSubmit = (event) => {
         event.preventDefault();
         let user = { name, email, password }
-        axios.post("http://localhost:4042/user", user).then((res) => {
-            if (res.data[0].password == password) {
-                setIsLoggedin(true)
-                sessionStorage.setItem("id", res.data[0].id)
-                sessionStorage.setItem('email', res.data[0].email)
+        axios.post("http://localhost:4042/user", user).then(() => {
+            if (user) {
+                // setIsLoggedin(true)
+                // sessionStorage.setItem("id", res.data[0].id)
+                // sessionStorage.setItem('email', res.data[0].email)
                 alert('Signup successful')
-                // navigate('/login')
+                navigate('/login')
             }
 
-        }).catch((err) => { console.log(err) })
+        }).catch((err) => {alert('Signup Failed!Try Again') })
         CheckEmail();
         CheckPassword();
         CheckName();

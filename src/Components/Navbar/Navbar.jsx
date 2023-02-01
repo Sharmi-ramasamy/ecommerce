@@ -14,6 +14,18 @@ export const Navbar = () => {
             navigate('/login')
         }
     }
+    
+    const handleClick=()=> {
+        console.log('logout');
+        if (sessionStorage.getItem("email")) {
+            sessionStorage.clear()
+            alert('Logout Successful')
+            navigate('/category')
+        }
+        else {
+            navigate('/home')
+        }
+    }
 
     return (
         <header className='headers'>
@@ -42,11 +54,17 @@ export const Navbar = () => {
                     </li>
 
                     <li>
-                        <Link to='/cart' className='cart'>
+                        <Link to='/cart' className='cart' title='Add to cart'>
                             <i className='fas fa-shopping-cart' />
                             {/* <span className='cart-length'> 
                             {cartItems.length ===0 ?  "" : cartItems.length}
                         </span> */}
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link to='/' className='logout' title='Logout' onClick={handleClick}> 
+                         <i className="fa fa-sign-out-alt"/> 
                         </Link>
                     </li>
 

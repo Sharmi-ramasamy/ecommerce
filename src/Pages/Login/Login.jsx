@@ -88,11 +88,10 @@ export default function Login() {
                 <strong className='error-msg'> {passwordError} </strong>
                 {Error&& <p style={{color:'palevioletred'}}> {Error} </p>} 
 
-                <button className='button' type="submit" disabled={!useremail}> Login </button> 
+                <button className='buttons' type="submit" disabled={!useremail}> Login </button> 
 
-             
               <Link className='signup' to="/signup"> 
-              <button className='button'> Sign Up </button></Link> 
+              <button className='buttons'> Sign Up </button></Link> 
 
             </form>
             

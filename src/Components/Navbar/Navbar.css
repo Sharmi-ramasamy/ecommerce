@@ -17,7 +17,7 @@
 }
 
 .headers-links {
-    display: flex;
+    display: flex;   
 }
 
 .headers-links ul li {
@@ -35,4 +35,12 @@
 
 .headers-links ul li a:hover {
     color: crimson;
+}
+
+.headers-links ul li .logout {
+    color:red;
+}
+
+.headers-links ul li .logout:hover {
+    color:white;
 }

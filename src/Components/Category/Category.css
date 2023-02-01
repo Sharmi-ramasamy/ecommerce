@@ -44,7 +44,7 @@ body {
     transition: 0.4s;
 }
 
-.container .procard .product-image img:hover{
+.container .procard .product-image:hover{
    transform: scale(1.1);
 }
 

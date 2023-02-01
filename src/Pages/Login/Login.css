@@ -10,6 +10,7 @@ body {
     height: 400px;
     margin-left: 450px;
     background-color: #FFFDD0;
+    box-shadow: 5px 5px 5px 5px silver;
     border-radius: 30px;
     }
 
@@ -45,7 +46,7 @@ form input {
     outline: none;
 }
 
-.button {
+.buttons {
     width: 290px;
     height: 35px;
     border-radius: 10px;
@@ -54,6 +55,10 @@ form input {
     background-color: #49c1a2;
     color: white;
     font-size: 18px;
+}
+
+.buttons:hover {
+    transform: scale(1.1);
 }
 
 
@@ -75,7 +80,7 @@ p {
 
 }
 
-.button {
+/* .button {
     width: 290px;
     height: 35px;
     border-radius: 10px;
@@ -84,6 +89,6 @@ p {
     background-color: #49c1a2;
     color: white;
     font-size: 18px;
-}
+} */
 
 

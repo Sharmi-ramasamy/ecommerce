@@ -32,7 +32,7 @@ export default function Signup() {
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("");
     const [nameError, setNameError] = useState("")
-    const [isLoggedin, setIsLoggedin] = useState(false)
+    // const [isLoggedin, setIsLoggedin] = useState(false)
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -42,15 +42,14 @@ export default function Signup() {
                 // setIsLoggedin(true)
                 // sessionStorage.setItem("id", res.data[0].id)
                 // sessionStorage.setItem('email', res.data[0].email)
-                alert('Signup successful')
                 navigate('/login')
+                alert('Signup successful')
             }
 
-        }).catch((err) => {alert('Signup Failed!Try Again') })
+        }).catch((err) => { alert('Signup Failed!Try Again') })
         CheckEmail();
         CheckPassword();
         CheckName();
-        // console.log(user);
     }
 
     function CheckEmail() {
@@ -97,6 +96,7 @@ export default function Signup() {
 
                     <label> Password</label>
                     <input value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="Enter password" />
+                    {/* <span>  <i className="fa-solid fa-eye"></i></span> */}
                     <strong className='error-msg'> {passwordError} </strong>
                     {Error && <p style={{ color: 'blue' }}> {Error} </p>}
                     <br /> <br /> <br />
@@ -113,5 +113,3 @@ export default function Signup() {
 
     )
 }
-
-

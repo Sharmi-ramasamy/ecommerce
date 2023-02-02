@@ -1,5 +1,5 @@
 .headers {
-    top:0;
+    top: 0;
     min-height: 65px;
     margin: 0 auto;
     display: flex;
@@ -17,7 +17,7 @@
 }
 
 .headers-links {
-    display: flex;   
+    display: flex;
 }
 
 .headers-links ul li {
@@ -38,9 +38,9 @@
 }
 
 .headers-links ul li .logout {
-    color:red;
+    color: red;
 }
 
 .headers-links ul li .logout:hover {
-    color:white;
+    color: white;
 }

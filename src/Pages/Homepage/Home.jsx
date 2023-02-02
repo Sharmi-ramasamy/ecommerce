@@ -1,16 +1,18 @@
 import React from 'react'
-import { Navbar } from '../../Components/Navbar/Navbar'
-import './Home.css'  
+import './Home.css'
+import { HomeCategory } from './HomeCategory'
+import { Slider } from './Slider'
 
 
 const Home = () => {
   return (
     <>
-    <section className='home'>
-      <div className='container d_flex'>
-           
-      </div>
-    </section>
+      <section className='home'>
+        <div className='container d_flex'>
+          <HomeCategory />
+          <Slider />
+        </div>
+      </section>
     </>
   )
 }

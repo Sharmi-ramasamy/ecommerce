@@ -7,9 +7,6 @@ import { useParams } from 'react-router-dom'
 export const SubCategory = () => {
 
     const [items, setItems] = useState([]);
-    
-    // const [email,setEmail]=useState("")
-    // const[addProduct,setAddProduct]=useState([]);
 
     const params = useParams()
     useEffect(() => {
@@ -21,32 +18,30 @@ export const SubCategory = () => {
         setItems(resp.data)
         const response = await axios.get("http://localhost:4042/ProductItems")
         setGetproduct(response.data)
-        // const cartres=await axios.post("http://localhost:4042/AddToCart")
-        // setAddcart(cartres.data)
-
     }
 
-    const addProduct=(productItem)=> {
-       
-        axios.post("http://localhost:4042/AddToCart",{
+    const addProduct = (productItem) => {
+
+        axios.post("http://localhost:4042/AddToCart", {
             "productid": productItem.id,
-      "category": productItem.category,
-      "SubCategory": productItem.SubCategory,
-      "name": productItem.name,
-      "price": productItem.price,
-      "desc": productItem.desc,
-      "image": productItem.image,
-      "email":sessionStorage.getItem('email'),
-      "quatity":1,
-      "value":productItem.price
+            "category": productItem.category,
+            "SubCategory": productItem.SubCategory,
+            "name": productItem.name,
+            "price": productItem.price,
+            "desc": productItem.desc,
+            "image": productItem.image,
+            "email": sessionStorage.getItem('email'),
+            "quantity": 1,
+            "value": productItem.price
         })
-            }
+        alert('Item Added to the Cart Succesfully')
+    }
 
 
     const categoryName = params.id;
     const [categoryname, setcategoryname] = useState([]);
     const [getproduct, setGetproduct] = useState([]);
-   
+
     return (
         <>
             {/* {categoryName} */}
@@ -78,7 +73,7 @@ export const SubCategory = () => {
                             </div>
                             <div className='product-price'> $ {productItem.price} </div>
 
-                            <div className='product-details'> {productItem.desc} </div><br/>
+                            <div className='product-details'> {productItem.desc} </div><br />
 
                             <div className='product-rating'>
                                 <i className='fa fa-star'></i>

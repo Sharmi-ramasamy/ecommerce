@@ -14,8 +14,8 @@ export const Navbar = () => {
             navigate('/login')
         }
     }
-    
-    const handleClick=()=> {
+
+    const handleClick = () => {
         console.log('logout');
         if (sessionStorage.getItem("email")) {
             sessionStorage.clear()
@@ -63,8 +63,8 @@ export const Navbar = () => {
                     </li>
 
                     <li>
-                        <Link to='/' className='logout' title='Logout' onClick={handleClick}> 
-                         <i className="fa fa-sign-out-alt"/> 
+                        <Link to='/' className='logout' title='Logout' onClick={handleClick}>
+                            <i className="fa fa-sign-out-alt" />
                         </Link>
                     </li>
 

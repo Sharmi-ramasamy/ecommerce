@@ -36,7 +36,7 @@ export default function Login() {
         // let cart=[]
         // sessionStorage.setItem('CartItems',JSON.stringify(cart));
         alert('Login successful')
-        navigate('/category')
+        navigate('/')
        } 
        else{
         setError("Invalid credentials")
@@ -80,13 +80,13 @@ export default function Login() {
             <form onSubmit={handleSubmit}>
             
                 <label> Email </label>
-                <input type="text" placeholder="Enter Email Id " name='email' onChange={(e)=>setUserEmail(e.target.value)} /> 
+                <input type="text" placeholder="Enter Email Id " name='email' onChange={(e)=>setUserEmail(e.target.value)} required/> 
                 <strong className='error-msg'> {emailError} </strong>
 
                 <label> Password</label>
                 <input type="password" placeholder="Enter password" name='password' onChange={(e)=>setUserPassword(e.target.value)}/>
                 <strong className='error-msg'> {passwordError} </strong>
-                {Error&& <p style={{color:'palevioletred'}}> {Error} </p>} 
+                {Error&& <p style={{color:'red'}}> {Error} </p>} 
 
                 <button className='buttons' type="submit" disabled={!useremail}> Login </button> 
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import './Home.css'
 import { HomeCategory } from './HomeCategory'
 import { Slider } from './Slider'
 

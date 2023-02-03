@@ -53,6 +53,48 @@
       "email": "Yazhini@gmail.com",
       "password": "Yazhini@123",
       "id": 8
+    },
+    {
+      "name": "bgnhuj",
+      "email": "vgbhyujnmki",
+      "password": "vgybhunj",
+      "id": 9
+    },
+    {
+      "name": "xdbhjrnttjtnthj",
+      "email": "vg@gmail.com",
+      "password": "cgvfbrtyhn",
+      "id": 10
+    },
+    {
+      "name": "xdbhjrnttjtnthj",
+      "email": "vg@gmail.com",
+      "password": "cgvfbrtyhn@gmai",
+      "id": 11
+    },
+    {
+      "name": "xdbhjrnttjtnthj",
+      "email": "vg@gmail.com",
+      "password": "vgnHi@12121",
+      "id": 12
+    },
+    {
+      "name": "xdbhjrnttjtnthj",
+      "email": "vg@gmail.com",
+      "password": "vgnHi@12121",
+      "id": 13
+    },
+    {
+      "name": "xdbhjrnttjtnthj",
+      "email": "vg@gmail.com",
+      "password": "vgnHi@12121",
+      "id": 14
+    },
+    {
+      "name": "xdbhjrnttjtnthj",
+      "email": "vg@gmail.com",
+      "password": "vgnHi@12121",
+      "id": 15
     }
   ],
   "Category": [
@@ -891,69 +933,44 @@
   ],
   "AddToCart": [
     {
-      "productid": 68,
-      "category": "Dress",
-      "SubCategory": "DressMen",
-      "name": "Men Dress",
-      "price": 799,
-      "desc": "ONNIX Mens Waistcoat",
-      "image": "https://m.media-amazon.com/images/I/81gQoBOqmpL._UX679_.jpg",
+      "productid": 41,
+      "category": "Mobiles",
+      "SubCategory": "Vivo",
+      "name": "Vivo Y22",
+      "price": 16499,
+      "desc": "Vivo Y22, 8GB + 128GB Storage Phone (Sunset Orange,8GB RAM,128GB Storage),CPH3467",
+      "image": "https://m.media-amazon.com/images/I/41W7ucPjk3L._SX300_SY300_QL70_FMwebp_.jpg",
       "email": "Ramasamy@gmail.com",
       "quantity": 1,
-      "value": 799,
+      "value": 16499,
       "id": 1
     },
     {
-      "productid": 65,
-      "category": "Dress",
-      "SubCategory": "DressMen",
-      "name": "Men Dress",
-      "price": 869,
-      "desc": "Men's Business Suit Vest Slim Fit Dress Vest Wedding Waistcoat",
-      "image": "https://m.media-amazon.com/images/I/41Ul3T-M-dL.._SX._UX._SY._UY_.jpg",
+      "productid": 32,
+      "category": "Mobiles",
+      "SubCategory": "Oppo",
+      "name": "Oppo A78 5G",
+      "price": 21999,
+      "desc": "Oppo A78 5G (Glowing Black,8GB RAM, 128GB Storage),Item Model Number-CPH2495",
+      "image": "/Assets/ProductCategory/Mobiles/Oppo/OppoA78.jpeg",
       "email": "Ramasamy@gmail.com",
       "quantity": 1,
-      "value": 869,
+      "value": 21999,
       "id": 2
     },
     {
-      "productid": 81,
-      "category": "Dress",
-      "SubCategory": "DressKids",
-      "name": "Kids Dress",
-      "price": 679,
-      "desc": "Bold N Elegant - Be Bold Inside & Elegant Outside Baby's Cotton Tshirt Pant Set",
-      "image": "https://m.media-amazon.com/images/I/51nUfiMuCLL._UX679_.jpg",
+      "productid": 33,
+      "category": "Mobiles",
+      "SubCategory": "Oppo",
+      "name": "Oppo K10",
+      "price": 18595,
+      "desc": "Oppo K10, 8GB + 128GB Storage Phone (Black Carbon, 5000 mAh Lithium Ion Polymer Battery,Item Model Number-CPH2337",
+      "image": "/Assets/ProductCategory/Mobiles/Oppo/OppoK10.jpeg",
       "email": "Ramasamy@gmail.com",
       "quantity": 1,
-      "value": 679,
+      "value": 18595,
       "id": 3
-    },
-    {
-      "productid": 82,
-      "category": "Dress",
-      "SubCategory": "DressKids",
-      "name": "Kids Dress",
-      "price": 609,
-      "desc": "Hopscotch Boys Overall & Dress Sets",
-      "image": "https://m.media-amazon.com/images/I/51xX3J8yjcS._UX679_.jpg",
-      "email": "Ramasamy@gmail.com",
-      "quantity": 1,
-      "value": 609,
-      "id": 4
-    },
-    {
-      "productid": 82,
-      "category": "Dress",
-      "SubCategory": "DressKids",
-      "name": "Kids Dress",
-      "price": 609,
-      "desc": "Hopscotch Boys Overall & Dress Sets",
-      "image": "https://m.media-amazon.com/images/I/51xX3J8yjcS._UX679_.jpg",
-      "email": "Ramasamy@gmail.com",
-      "quantity": 1,
-      "value": 609,
-      "id": 5
     }
-  ]
+  ],
+  "CheckoutDetails": []
 }

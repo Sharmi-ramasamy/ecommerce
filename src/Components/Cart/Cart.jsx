@@ -1,12 +1,13 @@
 import axios from 'axios';
 import React from 'react'
-import { useEffect } from 'react';
-import { useState } from 'react'
+import { useState,useEffect } from 'react';
 import './Cart.css'
+import { useNavigate } from 'react-router';
 
 export const Cart = () => {
 
     const [getProduct, setGetProduct] = useState([]);
+    const navigate=useNavigate();
 
     useEffect(() => {
         loadData();
@@ -111,19 +112,20 @@ export const Cart = () => {
                                 <button className='cart-items-remove' onClick={() => removeProduct(value)}> Remove </button>
                             </div>
                             <div className='cart-items-price'>
-                                {value.quantity} * <i className="fa-solid fa-rupee-sign"> {value.price} </i>
-                                <br />
-                                Price: <i className="fa fa-rupee">     {value.quantity * value.price} </i>
+                                {value.quantity} * $ {value.price} 
+                                <br/>
+                                Price:{value.quantity * value.price} 
                             </div>
                         </div>
                     ))}
                 </div>
 
                 <div className='cart-items-total-price-name'>
-                    Total Price: <i className="fa-solid fa-rupee-sign"> {TotalPrice} </i>
+                    Total Price:  {TotalPrice} 
                 </div>
-
             </div>
+
+            <button id='checkout' onClick={()=>navigate('/checkout')}> Checkout </button>
 
         </>
     )

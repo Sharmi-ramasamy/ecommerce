@@ -32,12 +32,13 @@ export default function Signup() {
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("");
     const [nameError, setNameError] = useState("")
-    // const [isLoggedin, setIsLoggedin] = useState(false)
+    const [isLoggedin, setIsLoggedin] = useState(false)
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
         let user = { name, email, password }
-        axios.post("http://localhost:4042/user", user).then(() => {
+        axios.post("http://localhost:4042/user", user).then((res) => {
             if (user) {
                 // setIsLoggedin(true)
                 // sessionStorage.setItem("id", res.data[0].id)
@@ -87,21 +88,21 @@ export default function Signup() {
                 <h4> Take a minute to signup </h4>
                 <form onSubmit={handleSubmit}>
                     <label> Name</label>
-                    <input value={name} onChange={event => setName(event.target.value)} type="text" placeholder="Enter your name" />
+                    <input value={name} onChange={event => setName(event.target.value)} type="text" placeholder="Enter your name" required/>
                     <strong className='error-msg'> {nameError} </strong>
 
                     <label> Email</label>
-                    <input value={email} onChange={event => setEmail(event.target.value)} type="text" placeholder="Enter email address" />
+                    <input value={email} onChange={event => setEmail(event.target.value)} type="text" placeholder="Enter email address" required/>
                     <strong className='error-msg'> {emailError} </strong>
 
                     <label> Password</label>
-                    <input value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="Enter password" />
+                    <input value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="Enter password" required/>
                     {/* <span>  <i className="fa-solid fa-eye"></i></span> */}
                     <strong className='error-msg'> {passwordError} </strong>
                     {Error && <p style={{ color: 'blue' }}> {Error} </p>}
                     <br /> <br /> <br />
 
-                    <button className='button' type='submit' disabled={!email}> Signup </button>
+                    <button className='button' type='submit'> Signup </button>
 
                     <Link className='signup' to="/login">
                         <button className='button'> Login </button></Link>

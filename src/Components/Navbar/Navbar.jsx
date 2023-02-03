@@ -5,15 +5,16 @@ import { useNavigate } from 'react-router-dom'
 
 export const Navbar = () => {
     const navigate = useNavigate()
-    const handleChange = () => {
-        console.log('done');
-        if (sessionStorage.getItem("email")) {
-            navigate('/category')
-        }
-        else {
-            navigate('/login')
-        }
-    }
+
+    // const handleChange = () => {
+    //     console.log('done');
+    //     if (sessionStorage.getItem("email")) {
+    //         navigate('/category')
+    //     }
+    //     else {
+    //         navigate('/login')
+    //     }
+    // }
 
     const handleClick = () => {
         console.log('logout');
@@ -26,7 +27,7 @@ export const Navbar = () => {
             navigate('/home')
         }
     }
-
+const store=sessionStorage.getItem('email')
     return (
         <header className='headers'>
             <div>
@@ -49,7 +50,7 @@ export const Navbar = () => {
                 </li> */}
 
 
-                    <li onClick={handleChange}>
+                    <li>
                         <Link to='/category'> Category </Link>
                     </li>
 
@@ -63,10 +64,15 @@ export const Navbar = () => {
                     </li>
 
                     <li>
+                     { store===null? <Link to='/login'> Login </Link>:<Link to='/logout'> <i className="fa-solid fa-gear"></i> </Link>} 
+                      
+                    </li>
+
+                    {/* <li>
                         <Link to='/' className='logout' title='Logout' onClick={handleClick}>
                             <i className="fa fa-sign-out-alt" />
                         </Link>
-                    </li>
+                    </li> */}
 
                 </ul>
 

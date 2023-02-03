@@ -5,8 +5,7 @@ import axios from 'axios'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 
 export const Category = () => {
-  // const getItems=productItems.filter(proitem=>proitem.category==category && proitem) 
-
+ 
   const navigate = useNavigate();
   const [items, setItems] = useState();
   const params = useParams()

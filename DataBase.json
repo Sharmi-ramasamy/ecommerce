@@ -53,48 +53,6 @@
       "email": "Yazhini@gmail.com",
       "password": "Yazhini@123",
       "id": 8
-    },
-    {
-      "name": "bgnhuj",
-      "email": "vgbhyujnmki",
-      "password": "vgybhunj",
-      "id": 9
-    },
-    {
-      "name": "xdbhjrnttjtnthj",
-      "email": "vg@gmail.com",
-      "password": "cgvfbrtyhn",
-      "id": 10
-    },
-    {
-      "name": "xdbhjrnttjtnthj",
-      "email": "vg@gmail.com",
-      "password": "cgvfbrtyhn@gmai",
-      "id": 11
-    },
-    {
-      "name": "xdbhjrnttjtnthj",
-      "email": "vg@gmail.com",
-      "password": "vgnHi@12121",
-      "id": 12
-    },
-    {
-      "name": "xdbhjrnttjtnthj",
-      "email": "vg@gmail.com",
-      "password": "vgnHi@12121",
-      "id": 13
-    },
-    {
-      "name": "xdbhjrnttjtnthj",
-      "email": "vg@gmail.com",
-      "password": "vgnHi@12121",
-      "id": 14
-    },
-    {
-      "name": "xdbhjrnttjtnthj",
-      "email": "vg@gmail.com",
-      "password": "vgnHi@12121",
-      "id": 15
     }
   ],
   "Category": [
@@ -412,145 +370,145 @@
       "id": 25,
       "category": "Mobiles",
       "SubCategory": "Redmi",
-      "name": "Redmi Note 12 5G",
-      "price": 17999,
-      "desc": "Redmi Note 12 5G Matte Black 4GB RAM 128GB ROM | 1st Phone with 120Hz Super AMOLED and Snapdragon® 4 Gen 1 | 48MP AI Triple Camera",
-      "image": "/Assets/ProductCategory/Mobiles/Redmi/RedmiNote12.jpg"
+      "name": "Redmi Note 11",
+      "price": 12999,
+      "desc": "Redmi Note 11 (Space Black, 4GB RAM, 64GB Storage)|90Hz FHD+ AMOLED Display | Qualcomm® Snapdragon™ 680-6nm | 33W Charger Included",
+      "image": "https://m.media-amazon.com/images/I/71yTvU9VgdL._SX679_.jpg"
     },
     {
       "id": 26,
       "category": "Mobiles",
       "SubCategory": "Redmi",
-      "name": "Redmi Note 11 Pro+",
-      "price": 19999,
-      "desc": "Redmi Note 11 Pro+ 5G , 6GB+128GB, Mirage Blue",
-      "image": "/Assets/ProductCategory/Mobiles/Redmi/RedmiNote11Pro+.jpg"
+      "name": "Redmi A1 ",
+      "price": 6499,
+      "desc": "Redmi A1 (Light Blue, 2GB RAM, 32GB Storage) | Segment Best AI Dual Cam | 5000mAh Battery | Leather Texture Design | Android 12",
+      "image": "https://m.media-amazon.com/images/I/41Wd9J6nfpL._SX300_SY300_QL70_FMwebp_.jpg"
     },
     {
       "id": 27,
       "category": "Mobiles",
       "SubCategory": "Redmi",
-      "name": "Redmi Note 10 Pro",
-      "price": 18999,
-      "desc": "Xiaomi Redmi Note 10 Pro 128 GB (Dark Nebula, 6 GB RAM)",
-      "image": "/Assets/ProductCategory/Mobiles/Redmi/RedmiNote10Pro.jpg"
+      "name": "Redmi 9A Sport",
+      "price": 6499,
+      "desc": "Redmi 9A Sport (Coral Green, 2GB RAM, 32GB Storage) | 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery",
+      "image": "https://m.media-amazon.com/images/I/810KHyQ4WcL._SX679_.jpg"
     },
     {
       "id": 28,
       "category": "Mobiles",
       "SubCategory": "Redmi",
-      "name": "Redmi Note 10",
-      "desc": "Redmi Note 10 (Dark Black , 8GB,128 GB",
-      "price": 13999,
-      "image": "/Assets/ProductCategory/Mobiles/Redmi/RedmiNote10.png"
+      "name": "Redmi Note 11",
+      "desc": "Redmi Note 11 (Horizon Blue, 6GB RAM, 128GB Storage)|90Hz FHD+ AMOLED Display | Qualcomm® Snapdragon™ 680-6nm | 33W Charger Included",
+      "price": 14999,
+      "image": "https://m.media-amazon.com/images/I/4121yWSVFmL._SX300_SY300_QL70_FMwebp_.jpg"
     },
     {
       "id": 29,
       "category": "Mobiles",
       "SubCategory": "Redmi",
-      "name": "Redmi Note 9",
-      "price": 12599,
-      "desc": "Redmi Note 9,Light Blue,6GB,256 GB",
-      "image": "/Assets/ProductCategory/Mobiles/Redmi/RedmiNote9.jpg"
+      "name": "Redmi 11 Prime 5G",
+      "price": 13999,
+      "desc": "Redmi 11 Prime 5G (Thunder Black, 4GB RAM, 64GB Storage) | Prime Design | MTK Dimensity 700 | 50 MP Dual Cam | 5000mAh | 7 Band 5G",
+      "image": "https://m.media-amazon.com/images/I/81lAth+jv+L._SX679_.jpg"
     },
     {
       "id": 30,
       "category": "Mobiles",
       "SubCategory": "Redmi",
-      "name": "Redmi Note 9 Prime",
-      "price": 13599,
-      "desc": "Redmi Note 9 Prime,Light Purple, 8GB , 256GB",
-      "image": "/Assets/ProductCategory/Mobiles/Redmi/Redmi9Prime.jpg"
+      "name": "Redmi Note 12 5G ",
+      "price": 9745,
+      "desc": "Redmi Note 12 5G Frosted Green 6GB RAM 128GB ROM | 1st Phone with 120Hz Super AMOLED and Snapdragon® 4 Gen 1 | 48MP AI Triple Camera",
+      "image": "https://m.media-amazon.com/images/I/81bIo+cfvTL._SX679_.jpg"
     },
     {
       "id": 31,
       "category": "Mobiles",
-      "SubCategory": "Redmi",
-      "name": "Oppo Reno6 5G",
-      "price": 36790,
-      "desc": "Oppo Reno6 5G, 8GB + 128GB Storage Phone (Black,12GB RAM,256GB Storage), Medium (CPH2249)",
-      "image": "/Assets/ProductCategory/Mobiles/Oppo/OppoReno6.jpeg"
+      "SubCategory": "Oppo",
+      "name": "OPPO A31",
+      "price": 12490,
+      "desc": "OPPO A31 (Mystery Black, 6GB RAM, 128GB Storage) with No Cost EMI/Additional Exchange Offers",
+      "image": "https://m.media-amazon.com/images/I/41OBf52bnOL._SX300_SY300_QL70_FMwebp_.jpg"
     },
     {
       "id": 32,
       "category": "Mobiles",
       "SubCategory": "Oppo",
-      "name": "Oppo A78 5G",
-      "price": 21999,
-      "desc": "Oppo A78 5G (Glowing Black,8GB RAM, 128GB Storage),Item Model Number-CPH2495",
-      "image": "/Assets/ProductCategory/Mobiles/Oppo/OppoA78.jpeg"
+      "name": "Oppo F21s Pro 5G ",
+      "price": 25999,
+      "desc": "Oppo F21s Pro 5G (Starlight Black, 8GB RAM, 128 Storage) with No Cost EMI/Additional Exchange Offers",
+      "image": "https://m.media-amazon.com/images/I/71TFnrSIs-L._SX679_.jpg"
     },
     {
       "id": 33,
       "category": "Mobiles",
       "SubCategory": "Oppo",
-      "name": "Oppo K10",
-      "price": 18595,
-      "desc": "Oppo K10, 8GB + 128GB Storage Phone (Black Carbon, 5000 mAh Lithium Ion Polymer Battery,Item Model Number-CPH2337",
-      "image": "/Assets/ProductCategory/Mobiles/Oppo/OppoK10.jpeg"
+      "name": "OPPO A16e",
+      "price": 9999,
+      "desc": "(Renewed) OPPO A16e (Blue, 4GB RAM, 64GB Storage) with No Cost EMI/Additional Exchange Offers",
+      "image": "https://m.media-amazon.com/images/I/613S46TCKcL._SX679_.jpg"
     },
     {
       "id": 34,
       "category": "Mobiles",
       "SubCategory": "Oppo",
-      "name": "Oppo F11 Pro",
-      "price": 21989,
-      "desc": "Oppo F11 Pro, 8GB + 128GB Storage Phone (Green,6GB RAM,256GB Storage),CPH1969",
-      "image": "/Assets/ProductCategory/Mobiles/Oppo/OppoF11Pro.jpg"
+      "name": "Oppo A77s ",
+      "price": 17999,
+      "desc": "Oppo A77s (Sunset Orange, 8GB RAM, 128 Storage) with No Cost EMI/Additional Exchange Offers",
+      "image": "https://m.media-amazon.com/images/I/41xX2S6OagL._SX300_SY300_QL70_FMwebp_.jpg"
     },
     {
       "id": 35,
       "category": "Mobiles",
       "SubCategory": "Oppo",
-      "name": "Oppo F15",
-      "price": 12252,
-      "desc": "Oppo F15, 8GB + 128GB Storage Phone (Light Carbon Black,8GB RAM,128GB Storage),CPH2342",
-      "image": "/Assets/ProductCategory/Mobiles/Oppo/OppoF15.jpg"
+      "name": "Oppo F19s",
+      "price": 15499,
+      "desc": "OPPO F19s (Glowing Gold, 6GB RAM, 128 Storage) with No Cost EMI/Additional Exchange Offers",
+      "image": "https://m.media-amazon.com/images/I/61xXPX7Mv0L._SX679_.jpg"
     },
     {
       "id": 36,
       "category": "Mobiles",
       "SubCategory": "Oppo",
-      "name": "Oppo F21 Pro Plus",
-      "price": 27999,
+      "name": "Oppo K10 5G ",
+      "price": 12499,
       "desc": "Oppo F21 Pro, 8GB + 128GB Storage Phone (Sunset Orange,8GB RAM,128GB Storage),CPH3467",
-      "image": "/Assets/ProductCategory/Mobiles/Oppo/OppoF21.jpg"
+      "image": "https://m.media-amazon.com/images/I/71v74acXDIL._SY879_.jpg"
     },
     {
       "id": 37,
       "category": "Mobiles",
       "SubCategory": "Samsung",
-      "name": "Samsung Galaxy S22",
-      "price": 106999,
-      "desc": "Samsung Galaxy S22 Ultra 5G (Burgundy, 12GB, 256GB Storage)",
-      "image": "/Assets/ProductCategory/Mobiles/Samsung/S22.jpg"
+      "name": "Samsung Galaxy S23 Ultra 5G ",
+      "price": 124999,
+      "desc": "Samsung Galaxy S23 Ultra 5G (Green, 12GB, 256GB Storage)",
+      "image": "https://m.media-amazon.com/images/I/41kyuER2HjL._SX300_SY300_QL70_FMwebp_.jpg"
     },
     {
       "id": 38,
       "category": "Mobiles",
       "SubCategory": "Samsung",
-      "name": "Samsung Galaxy M53",
-      "price": 25999,
+      "name": "Samsung Galaxy S23 Plus 5G",
+      "price": 94999,
       "desc": "Samsung Galaxy M53 5G (Charcoal Black, 8GB, 128GB Storage)",
-      "image": "/Assets/ProductCategory/Mobiles/Samsung/m53.jpg"
+      "image": "https://m.media-amazon.com/images/I/61bM8Mojf6L._SX679_.jpg"
     },
     {
       "id": 39,
       "category": "Mobiles",
       "SubCategory": "Samsung",
-      "name": "Samsung Galaxy A14",
-      "price": 16499,
-      "desc": "Samsung Galaxy A14,Light Green,5G,4GB|64GB",
-      "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/75868132-1423-4711-a232-b200d78188c123201257_416x416.jpg"
+      "name": "Samsung Galaxy S23 5G ",
+      "price": 79999,
+      "desc": "Samsung Galaxy S23 5G (Lavender, 8GB, 256GB Storage)",
+      "image": "https://m.media-amazon.com/images/I/61L68P3+fxL._SX679_.jpg"
     },
     {
       "id": 40,
       "category": "Mobiles",
       "SubCategory": "Samsung",
-      "name": "Samsung Galaxy S21",
-      "price": 83999,
-      "desc": "Samsung Galaxy S21 5G (Phantom Violet, 8GB, 128GB Storage)",
-      "image": "https://images.samsung.com/is/image/samsung/assets/uk/2201/preorder/1_image_carousel/4_product_image/S21FE_Carousel_ProductImage_Lavender_MO.jpg"
+      "name": "Samsung Galaxy A13 Blue",
+      "price": 16999,
+      "desc": "Samsung Galaxy A13 Blue, 6GB RAM, 128GB Storage with No Cost EMI/Additional Exchange Offers, (SM-A135FLBJINS)",
+      "image": "https://m.media-amazon.com/images/I/81i1A1MgXBL._SX679_.jpg"
     },
     {
       "id": 41,
@@ -592,10 +550,10 @@
       "id": 45,
       "category": "Mobiles",
       "SubCategory": "Vivo",
-      "name": "Vivo T1 5G",
-      "price": 16990,
-      "desc": "Vivo T1 5G (Rainbow Fantasy, 6GB, 128GB)",
-      "image": "https://www.poojaratele.com/media/catalog/product/cache/28b568fbf82d79c53c9eab7361be58d0/v/i/vivo-t1-5g-rainbow-thum1_1.jpg"
+      "name": "Vivo Y16",
+      "price": 12499,
+      "desc": "Vivo Y16 (Stellar Black, 4GB RAM, 64GB Storage) with No Cost EMI/Additional Exchange Offers",
+      "image": "https://m.media-amazon.com/images/I/61vBPptSghL._SX679_.jpg"
     },
     {
       "id": 46,
@@ -931,46 +889,25 @@
       "image": "https://m.media-amazon.com/images/I/51xX3J8yjcS._UX679_.jpg"
     }
   ],
-  "AddToCart": [
+  "AddToCart": [],
+  "CheckoutDetails": [
     {
-      "productid": 41,
-      "category": "Mobiles",
-      "SubCategory": "Vivo",
-      "name": "Vivo Y22",
-      "price": 16499,
-      "desc": "Vivo Y22, 8GB + 128GB Storage Phone (Sunset Orange,8GB RAM,128GB Storage),CPH3467",
-      "image": "https://m.media-amazon.com/images/I/41W7ucPjk3L._SX300_SY300_QL70_FMwebp_.jpg",
-      "email": "Ramasamy@gmail.com",
-      "quantity": 1,
-      "value": 16499,
+      "name": "",
+      "email": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "zip": "",
       "id": 1
     },
     {
-      "productid": 32,
-      "category": "Mobiles",
-      "SubCategory": "Oppo",
-      "name": "Oppo A78 5G",
-      "price": 21999,
-      "desc": "Oppo A78 5G (Glowing Black,8GB RAM, 128GB Storage),Item Model Number-CPH2495",
-      "image": "/Assets/ProductCategory/Mobiles/Oppo/OppoA78.jpeg",
-      "email": "Ramasamy@gmail.com",
-      "quantity": 1,
-      "value": 21999,
+      "name": "",
+      "email": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "zip": "",
       "id": 2
-    },
-    {
-      "productid": 33,
-      "category": "Mobiles",
-      "SubCategory": "Oppo",
-      "name": "Oppo K10",
-      "price": 18595,
-      "desc": "Oppo K10, 8GB + 128GB Storage Phone (Black Carbon, 5000 mAh Lithium Ion Polymer Battery,Item Model Number-CPH2337",
-      "image": "/Assets/ProductCategory/Mobiles/Oppo/OppoK10.jpeg",
-      "email": "Ramasamy@gmail.com",
-      "quantity": 1,
-      "value": 18595,
-      "id": 3
     }
-  ],
-  "CheckoutDetails": []
+  ]
 }

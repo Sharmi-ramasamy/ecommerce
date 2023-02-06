@@ -10,7 +10,6 @@ const Sdata = [
     title: "50% Off For Your First Shopping",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
     cover: "./Assets/SlideCard/Slide-2.png",
-
   },
   {
     id: 3,
@@ -24,5 +23,5 @@ const Sdata = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
     cover: "./Assets/SlideCard/Slide-4.png",
   },
-]
-export default Sdata
+];
+export default Sdata;

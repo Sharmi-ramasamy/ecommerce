@@ -14,7 +14,12 @@ body {
     border-radius: 30px;
 }
 
-h1 {
+h1 h3{
+    text-align: center;
+    padding-top: 15px;
+}
+
+h3{
     text-align: center;
     padding-top: 15px;
 }

@@ -37,7 +37,6 @@ body {
   justify-content: space-between;
 }
 
-
 .f_flex {
   display: flex;
 }
@@ -54,7 +53,6 @@ li {
 .RText {
   text-align-last: right;
 }
-
 
 body {
   overflow-x: hidden;

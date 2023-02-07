@@ -17,7 +17,6 @@ export const Navbar = (productItem) => {
   // }
 
   const handleClick = () => {
-    console.log("logout");
     if (sessionStorage.getItem("email")) {
       sessionStorage.clear();
       alert("Logout Successful");

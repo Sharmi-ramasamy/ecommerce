@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+// import { Toast } from "../../Components/Toast/Toast";
 
 export default function Login() {
   const EmailValid = (email) => {
@@ -33,7 +34,8 @@ export default function Login() {
           setIsLoggedin(true);
           sessionStorage.setItem("id", res.data[0].id);
           sessionStorage.setItem("email", res.data[0].email);
-          alert("Login successful");
+          // alert("Login successful");
+          // Toast();
           navigate("/");
         } else {
           setError("Invalid credentials");
@@ -70,6 +72,7 @@ export default function Login() {
     <>
       <div className="login-box">
         <h1> Login </h1>
+        {/* {Toast()} */}
         <form onSubmit={handleSubmit}>
           <label> Email </label>
           <input
@@ -92,8 +95,7 @@ export default function Login() {
           {Error && <p style={{ color: "red" }}> {Error} </p>}
 
           <button className="buttons" type="submit" disabled={!useremail}>
-            {" "}
-            Login{" "}
+            Login
           </button>
 
           <Link className="signup" to="/signup">

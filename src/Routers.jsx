@@ -7,6 +7,7 @@ import { Category } from "./Components/Category/Category";
 import { Error } from "./Components/Error/Error";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { SubCategory } from "./Components/SubCategory/SubCategory";
+// import { Toast } from "./Components/Toast/Toast";
 import Home from "./Pages/Homepage/Home";
 import Login from "./Pages/Login/Login";
 import { ChangePassword } from "./Pages/Signup/ChangePassword";
@@ -16,8 +17,8 @@ export const Routing = () => {
   return (
     <>
       <Navbar />
-      
-      
+
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -26,9 +27,9 @@ export const Routing = () => {
         <Route path="/category/:id" element={<SubCategory />} />
         <Route path="cart" element={<Cart />} />
         <Route path="*" element={<Error />} />
-        <Route path="changepassword" element={<ChangePassword />} />
+        <Route path="/changepassword" element={<ChangePassword />} />
       </Routes>
-      
+
     </>
   );
 };

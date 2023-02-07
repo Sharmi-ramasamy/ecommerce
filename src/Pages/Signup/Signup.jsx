@@ -120,13 +120,12 @@ export default function Signup() {
           {Error && <p style={{ color: "blue" }}> {Error} </p>}
           <br /> <br /> <br />
           <button className="button" type="submit">
-            {" "}
-            Signup{" "}
+            Signup
           </button>
           <Link className="signup" to="/login">
             <button className="button"> Login </button>
           </Link>
-        </form>{" "}
+        </form>
         <br />
       </div>
     </>

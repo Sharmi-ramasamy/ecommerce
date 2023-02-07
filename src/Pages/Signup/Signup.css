@@ -14,7 +14,17 @@ body {
     border-radius: 30px;
 }
 
-h1 h3{
+.change-box {
+    margin-top: 50px;
+    width: 360px;
+    height: 500px;
+    margin-left: 450px;
+    background-color: #FFFDD0;
+    box-shadow: 5px 5px 5px 5px silver;
+    border-radius: 30px;
+}
+
+h1 {
     text-align: center;
     padding-top: 15px;
 }

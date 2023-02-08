@@ -1,8 +1,9 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Signup.css";
+import ecomUrl from "../../Components/Axios";
 
 export default function Signup() {
   const EmailValid = (email) => {
@@ -37,8 +38,8 @@ export default function Signup() {
     event.preventDefault();
 
     let user = { name, email, password };
-    axios
-      .post("http://localhost:4042/user", user)
+    ecomUrl
+      .post("user", user)
       .then(() => {
         if (user) {
           // setIsLoggedin(true)
@@ -77,12 +78,23 @@ export default function Signup() {
   function CheckName() {
     if (!NameValid(name)) {
       return setNameError(
-        "UserName should contain Minimum 8 Characters with smallcase or lowercase"
+        "UserName should contain Minimum 8 Characters with lowercase,uppercase or combination of it"
       );
     } else {
       return setNameError(" ");
     }
   }
+
+  // function dialogbox() {
+  //   return (
+  //     <dialog open>
+  //       <p>Signup Successful </p>
+  //       <form method="dialog">
+  //         <button>OK</button>
+  //       </form>
+  //     </dialog>
+  //   );
+  // }
 
   return (
     <>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
-import axios from "axios";
 import { Link } from "react-router-dom";
 // import { Toast } from "../../Components/Toast/Toast";
+import ecomUrl from "../../Components/Axios";
 
 export default function Login() {
   const EmailValid = (email) => {
@@ -27,8 +27,8 @@ export default function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios
-      .get("http://localhost:4042/user?email=" + useremail)
+    ecomUrl
+      .get("user?email=" + useremail)
       .then((res) => {
         if (res.data[0].password == userpassword) {
           setIsLoggedin(true);

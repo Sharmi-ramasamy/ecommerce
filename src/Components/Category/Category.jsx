@@ -1,15 +1,16 @@
 import React from "react";
 import "./Category.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import ecomUrl from "../Axios";
 
 export const Category = () => {
   const navigate = useNavigate();
   const [items, setItems] = useState();
   const params = useParams();
   useEffect(() => {
-    axios.get("http://localhost:4042/Category").then((response) => {
+    ecomUrl.get("Category").then((response) => {
       setItems(response.data);
       // console.log(response.data)
     });

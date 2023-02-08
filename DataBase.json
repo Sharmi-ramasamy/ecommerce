@@ -1,9 +1,9 @@
 {
   "user": [
     {
-      "name": "Sharmi",
+      "name": "sharmiramasamy",
       "email": "sharmi@gmail.com",
-      "password": "Password@123",
+      "password": "Sharmi@123",
       "id": 0
     },
     {
@@ -53,6 +53,12 @@
       "email": "Yazhini@gmail.com",
       "password": "Yazhini@123",
       "id": 8
+    },
+    {
+      "name": "ShankarRamasamy",
+      "email": "ShankarRam@gmail.com",
+      "password": "Shankar@2005",
+      "id": 9
     }
   ],
   "Category": [
@@ -889,19 +895,5 @@
       "image": "https://m.media-amazon.com/images/I/51xX3J8yjcS._UX679_.jpg"
     }
   ],
-  "AddToCart": [
-    {
-      "productid": 1,
-      "category": "Mobiles",
-      "SubCategory": "Redmi",
-      "name": "Redmi Note 11",
-      "price": 12999,
-      "desc": "Redmi Note 11 (Space Black, 4GB RAM, 64GB Storage)|90Hz FHD+ AMOLED Display | Qualcomm® Snapdragon™ 680-6nm | 33W Charger Included",
-      "image": "https://m.media-amazon.com/images/I/71yTvU9VgdL._SX679_.jpg",
-      "email": "Ramasamy@gmail.com",
-      "quantity": 2,
-      "value": 12999,
-      "id": 1
-    }
-  ]
+  "AddToCart": []
 }

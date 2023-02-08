@@ -1,7 +1,7 @@
-import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
 import "./Cart.css";
+import ecomUrl from "../Axios";
 // import { useNavigate } from "react-router";
 
 export const Cart = () => {
@@ -13,12 +13,12 @@ export const Cart = () => {
   }, []);
 
   const loadData = async () => {
-    const response = await axios.get("http://localhost:4042/AddToCart");
+    const response = await ecomUrl.get("AddToCart");
     setGetProduct(response.data);
   };
 
   const increaseProduct = (productItem) => {
-    axios.put("http://localhost:4042/AddToCart/" + productItem.id, {
+    ecomUrl.put("AddToCart/" + productItem.id, {
       productid: productItem.id,
       category: productItem.category,
       SubCategory: productItem.SubCategory,
@@ -36,7 +36,7 @@ export const Cart = () => {
   };
 
   const decreaseProduct = (productItem) => {
-    axios.put("http://localhost:4042/AddToCart/" + productItem.id, {
+    ecomUrl.put("AddToCart/" + productItem.id, {
       productid: productItem.id,
       category: productItem.category,
       SubCategory: productItem.SubCategory,
@@ -54,7 +54,7 @@ export const Cart = () => {
   };
 
   const removeProduct = (productItem) => {
-    axios.delete("http://localhost:4042/AddToCart/" + productItem.id);
+    ecomUrl.delete("AddToCart/" + productItem.id);
     setTimeout(() => {
       loadData();
     }, 500);
@@ -68,7 +68,7 @@ export const Cart = () => {
         }
       })
       .map((e) => {
-        axios.delete("http://localhost:4042/AddToCart/" + e.id);
+        ecomUrl.delete("AddToCart/" + e.id);
       });
     setTimeout(() => {
       loadData();
@@ -91,8 +91,7 @@ export const Cart = () => {
         <div className="clear-cart">
           {getProduct.length >= 1 && (
             <button className="clear-cart-button" onClick={() => clearCart()}>
-              {" "}
-              Clear Cart{" "}
+              Clear Cart
             </button>
           )}
         </div>

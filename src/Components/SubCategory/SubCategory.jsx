@@ -1,8 +1,8 @@
 import React from "react";
 import "./SubCategory.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
+import ecomUrl from "../Axios";
 
 export const SubCategory = () => {
   const [items, setItems] = useState([]);
@@ -13,14 +13,14 @@ export const SubCategory = () => {
   }, []);
 
   const loaddata = async () => {
-    const resp = await axios.get("http://localhost:4042/SubCategory");
+    const resp = await ecomUrl.get("SubCategory");
     setItems(resp.data);
-    const response = await axios.get("http://localhost:4042/ProductItems");
+    const response = await ecomUrl.get("ProductItems");
     setGetproduct(response.data);
   };
 
   const addProduct = (productItem) => {
-    axios.post("http://localhost:4042/AddToCart", {
+    ecomUrl.post("AddToCart", {
       productid: productItem.id,
       category: productItem.category,
       SubCategory: productItem.SubCategory,

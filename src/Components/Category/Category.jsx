@@ -3,7 +3,7 @@ import "./Category.css";
 import { useState, useEffect } from "react";
 // import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-import ecomUrl from "../Axios";
+import ecomUrl from "../AxiosUrl/Axios";
 
 export const Category = () => {
   const navigate = useNavigate();

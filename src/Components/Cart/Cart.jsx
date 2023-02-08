@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./Cart.css";
-import ecomUrl from "../Axios";
+import ecomUrl from "../AxiosUrl/Axios";
 // import { useNavigate } from "react-router";
 
 export const Cart = () => {

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import ecomUrl from "../../Components/Axios";
+import ecomUrl from "../../Components/AxiosUrl/Axios";
 
 export const ChangePassword = () => {
   const userId = sessionStorage.getItem("id");

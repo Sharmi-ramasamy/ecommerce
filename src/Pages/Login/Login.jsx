@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { Link } from "react-router-dom";
 // import { Toast } from "../../Components/Toast/Toast";
-import ecomUrl from "../../Components/Axios";
+import ecomUrl from "../../Components/AxiosUrl/Axios";
 
 export default function Login() {
   const EmailValid = (email) => {

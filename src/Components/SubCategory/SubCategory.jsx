@@ -2,7 +2,7 @@ import React from "react";
 import "./SubCategory.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ecomUrl from "../Axios";
+import ecomUrl from "../AxiosUrl/Axios";
 
 export const SubCategory = () => {
   const [items, setItems] = useState([]);

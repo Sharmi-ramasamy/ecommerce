@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Signup.css";
-import ecomUrl from "../../Components/Axios";
+import ecomUrl from "../../Components/AxiosUrl/Axios";
 
 export default function Signup() {
   const EmailValid = (email) => {

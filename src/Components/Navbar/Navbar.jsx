@@ -40,6 +40,9 @@ export const Navbar = (productItem) => {
       <div className="headers-links">
         <ul>
           <li>
+            <Link to="/search"> Search </Link>
+          </li>
+          <li>
             <Link to="/"> Home </Link>
           </li>
           <li>

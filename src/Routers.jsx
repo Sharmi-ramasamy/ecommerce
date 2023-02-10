@@ -6,6 +6,7 @@ import { Cart } from "./Components/Cart/Cart";
 import { Category } from "./Components/Category/Category";
 import { Error } from "./Components/Error/Error";
 import { Navbar } from "./Components/Navbar/Navbar";
+import { Search } from "./Components/Search/Search";
 import { SubCategory } from "./Components/SubCategory/SubCategory";
 // import { Toast } from "./Components/Toast/Toast";
 import Home from "./Pages/Homepage/Home";
@@ -28,6 +29,7 @@ export const Routing = () => {
         <Route path="cart" element={<Cart />} />
         <Route path="*" element={<Error />} />
         <Route path="/changepassword" element={<ChangePassword />} />
+        <Route path='/search' element={<Search/>}/>
       </Routes>
 
     </>

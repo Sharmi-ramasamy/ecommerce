@@ -8,6 +8,7 @@ export const SubCategory = () => {
   const [items, setItems] = useState([]);
 
   const params = useParams();
+
   useEffect(() => {
     loaddata();
   }, []);
@@ -43,8 +44,12 @@ export const SubCategory = () => {
     <>
       {/* {categoryName} */}
       {/* {categoryname} */}
+      {/* <div id="search-container">
+        <input type="search" id="search-input" placeholder="Search product" />
+        <button id="search"> Search </button>
+        {categoryName}
+      </div> */}
       <div className="wrapper">
-        <h3> All Products</h3>
         <h2> Filter Products: </h2>
         <div>
           {items

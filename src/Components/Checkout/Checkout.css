@@ -1,52 +1,33 @@
-body {
-    /* background-image:url() ; */
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.signup-box {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 360px;
-    height: 590px;
-    margin-left: 450px;
-    background-color: #FFFDD0;
-    box-shadow: 5px 5px 5px 5px silver;
-    border-radius: 30px;
-}
-
-.change-box {
+.checkout-box {
     margin-top: 50px;
-    width: 360px;
-    height: 500px;
+    width: 400px;
+    height: 600px;
     margin-left: 450px;
     background-color: #FFFDD0;
     box-shadow: 5px 5px 5px 5px silver;
     border-radius: 30px;
-}
+    }
 
-h1 {
+h3 {
     text-align: center;
     padding-top: 15px;
-}
-
-h3{
-    text-align: center;
-    padding-top: 15px;
-}
-
-h4 {
-    text-align: center;
-}
+    }
 
 form {
-    width: 300px;
+    width :300px;
     margin-left: 20px;
 }
 
 form label {
-    display: flex;
+    display:flex;
     margin-top: 20px;
     font-size: 18px;
+}
+
+.error-msg {
+    color: crimson;
+    font-size: 12px;
+    font-style: italic;
 }
 
 form input {
@@ -58,7 +39,7 @@ form input {
     outline: none;
 }
 
-.button {
+.buttons {
     width: 290px;
     height: 35px;
     border-radius: 10px;
@@ -69,12 +50,24 @@ form input {
     font-size: 18px;
 }
 
-.button:hover {
+.buttons:hover {
     transform: scale(1.1);
 }
 
-.instruction{
-    color: crimson;
-    margin-top: 20px;
-    font-weight:600;
+p {
+    text-align:justify;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.para-2 {
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.para-2 a{
+    color: palevioletred;
+
 }

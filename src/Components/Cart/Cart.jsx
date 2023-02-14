@@ -2,11 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./Cart.css";
 import ecomUrl from "../AxiosUrl/Axios";
-// import { useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 export const Cart = () => {
   const [getProduct, setGetProduct] = useState([]);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     loadData();
@@ -145,10 +145,10 @@ export const Cart = () => {
         </div>
       </div>
 
-      {/* <button id="checkout" onClick={() => navigate("/checkout")}>
+      <button id="checkout" onClick={() => navigate("/checkout")}>
         {" "}
         Checkout{" "}
-      </button> */}
+      </button>
     </>
   );
 };

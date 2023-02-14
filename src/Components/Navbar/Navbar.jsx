@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
+import { logoutsuccess } from "../Toast/Toast";
 
 export const Navbar = (productItem) => {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ export const Navbar = (productItem) => {
   const handleClick = () => {
     if (sessionStorage.getItem("email")) {
       sessionStorage.clear();
-      alert("Logout Successful");
+      logoutsuccess();
       navigate("/");
     } else {
       navigate("/logout");
@@ -39,8 +40,11 @@ export const Navbar = (productItem) => {
 
       <div className="headers-links">
         <ul>
-          <li>
+          {/* <li>
             <Link to="/search"> Search </Link>
+          </li> */}
+          <li>
+            <Link to="/adduser"> Add </Link>
           </li>
           <li>
             <Link to="/"> Home </Link>

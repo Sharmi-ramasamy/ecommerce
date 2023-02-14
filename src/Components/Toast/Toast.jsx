@@ -1,8 +1,15 @@
-//import React from "react";
-//import Login from "../../Pages/Login/Login";
+/* eslint-disable prettier/prettier */
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
 
-export const Toast = () => {
-  // console.log(val);
-  // <button> X </button>;
-  return <p> Success </p>; // console.log(val);
+export const logoutsuccess = () => {
+  toast.success("Logout successfull",{
+    position:toast.POSITION.TOP_CENTER,
+  })
+};
+
+export const loginsuccess = () => {
+  toast.success("Logout successfull",{
+    position:toast.POSITION.TOP_CENTER,
+  })
 };

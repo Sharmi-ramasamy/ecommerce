@@ -8,14 +8,13 @@ export const Navbar = (productItem) => {
   const navigate = useNavigate();
 
   // const handleChange = () => {
-  //     console.log('done');
-  //     if (sessionStorage.getItem("email")) {
-  //         navigate('/category')
-  //     }
-  //     else {
-  //         navigate('/login')
-  //     }
-  // }
+  //   console.log("done");
+  //   if (sessionStorage.getItem("email")) {
+  //     navigate("/category");
+  //   } else {
+  //     navigate("/login");
+  //   }
+  // };
 
   const handleClick = () => {
     if (sessionStorage.getItem("email")) {
@@ -40,19 +39,12 @@ export const Navbar = (productItem) => {
 
       <div className="headers-links">
         <ul>
-          {/* <li>
-            <Link to="/search"> Search </Link>
-          </li> */}
-          <li>
-            <Link to="/adduser"> Add </Link>
-          </li>
           <li>
             <Link to="/"> Home </Link>
           </li>
           <li>
             <Link to="/category"> Category </Link>
           </li>
-
           <li>
             <Link to="/cart" className="cart" title="Add to cart">
               <i className="fas fa-shopping-cart" />

@@ -1,145 +1,120 @@
-// import axios from "axios";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-import "./Signup.css";
-import ecomUrl from "../../Components/AxiosUrl/Axios";
+/* eslint-disable no-unused-vars */
+/* eslint-disable prettier/prettier */
+import React from 'react'
+import { useState } from 'react'
+import { useNavigate } from 'react-router'
+import ecomUrl from '../../Components/AxiosUrl/Axios'
+import { Link } from 'react-router-dom'
+import './Signup.css'
+import { signupsuccess } from '../../Components/Toast/Toast'
 
-export default function Signup() {
-  const EmailValid = (email) => {
-    const emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
-    return emailRegex.test(email);
-  };
-
-  const PasswordValid = (password) => {
-    const passwordRegex =
-      /^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/;
-    return passwordRegex.test(password);
-  };
-
-  const NameValid = (name) => {
-    const nameRegex = /^[a-zA-Z]{8,20}$/;
-    return nameRegex.test(name);
-  };
-
-  const navigate = useNavigate();
-
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [Error] = useState("");
-
-  const [emailError, setEmailError] = useState("");
-  const [passwordError, setPasswordError] = useState("");
-  const [nameError, setNameError] = useState("");
-  //   const [isLoggedin, setIsLoggedin] = useState(false);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    let user = { name, email, password };
-    ecomUrl
-      .post("user", user)
-      .then(() => {
-        if (user) {
-          // setIsLoggedin(true)
-          // sessionStorage.setItem("id", res.data[0].id)
-          // sessionStorage.setItem('email', res.data[0].email)
-          navigate("/login");
-          alert("Signup successful");
+export const Signup = () => {
+    const [name,setName]=useState("")
+    const [nameError,setNameError]=useState("")
+    const [email,setEmail]=useState("")
+    const [emailError,setEmailError]=useState("")
+    const [password,setPassword]=useState("")
+    const [passwordError,setPasswordError]=useState("")
+    const [credenError,setcredenError]=useState("")
+    const [show,setShow]=useState("")
+    const navigate=useNavigate()
+    const validateForm=(email,password,name) =>{
+        if(name==null | name==''){
+            setNameError('Please enter your name')
         }
-      })
-      .catch(() => {
-        alert("Signup Failed!Try Again");
-      });
-    CheckEmail();
-    CheckPassword();
-    CheckName();
-  };
+        if(email==null | email=='') {
+            setEmailError('Please enter your email')
+        }
+        if(password==null | password=='') {
+            setPasswordError('Please fill the password field')
+        }
+        if (
+            email.match(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/) &&
+            password.match(/^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/)
+        ) 
+        {
+            return false;
+        } else {
+            return true;
+        }
+    };
 
-  function CheckEmail() {
-    if (!EmailValid(email)) {
-      return setEmailError("Please enter valid email id");
+    const adduser=(e)=>{
+    e.preventDefault();
+    if (validateForm(email,password,name)) {
+        alert('Enter valid credentials')
     } else {
-      return setEmailError(" ");
+        const user={name,email,password}
+       signupsuccess()
+        ecomUrl.post('user',user).then(()=>{
+            navigate('/userlog')
+        }).catch(()=>{
+            alert('server error')
+        })
     }
-  }
-
-  function CheckPassword() {
-    if (!PasswordValid(password)) {
-      return setPasswordError(
-        "Password should have minimum 9 characters with combination of uppercase, lowercase ,numbers and a special character '!@#$%*' "
-      );
-    } else {
-      return setPasswordError(" ");
-    }
-  }
-
-  function CheckName() {
-    if (!NameValid(name)) {
-      return setNameError(
-        "UserName should contain Minimum 8 Characters with lowercase,uppercase or combination of it"
-      );
-    } else {
-      return setNameError(" ");
-    }
-  }
-
-  // function dialogbox() {
-  //   return (
-  //     <dialog open>
-  //       <p>Signup Successful </p>
-  //       <form method="dialog">
-  //         <button>OK</button>
-  //       </form>
-  //     </dialog>
-  //   );
-  // }
-
-  return (
-    <>
-      <div className="signup-box">
-        <h1> Sign Up </h1> <br />
-        <h4> Take a minute to signup </h4>
-        <form onSubmit={handleSubmit}>
-          <label> Name</label>
+    };
+      return (
+        <>
+        <div className="signup-box">
+        <h1> Signup </h1>
+        <form onSubmit={adduser}>
+        <label htmlFor='username'> User Name </label>
           <input
+            type="text"
+            placeholder="Enter Name"
+            id='username'
+            name="username"
             value={name}
-            onChange={(event) => setName(event.target.value)}
-            type="text"
-            placeholder="Enter your name"
-            required
+            onChange={(e) => setName(e.target.value)}
+            onClick={(e)=>{
+                e.target.focus(setcredenError(null),setNameError(null))
+            }}
           />
-          <strong className="error-msg"> {nameError} </strong>
-          <label> Email</label>
+          <strong className='error-msg'> {nameError} </strong>
+          <label> Email </label>
           <input
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
             type="text"
-            placeholder="Enter email address"
-            required
+            value={email}
+            placeholder="Enter Email Id "
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+            onClick={(e)=>{
+                e.target.focus(setcredenError(null),setEmailError(null))
+            }}
           />
           <strong className="error-msg"> {emailError} </strong>
           <label> Password</label>
           <input
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-            type="password"
+            type={show ? 'text' : "password"}
             placeholder="Enter password"
-            required
+            name="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            onClick={(e)=>{
+                e.target.focus(setcredenError(null),setPasswordError(null))
+            }}
           />
+          <p onClick={()=> setShow((prestate)=>!prestate)}>
+            <i
+            className='fa fa-eye fa-fw'
+            id='togglePassword'
+            aria-hidden='true'
+            ></i>
+          </p>
           <strong className="error-msg"> {passwordError} </strong>
-          {Error && <p style={{ color: "blue" }}> {Error} </p>}
-          <br /> <br /> <br />
-          <button className="button" type="submit">
-            Signup
+          <button className="buttons" type="submit" >
+            SignUp
           </button>
-          <Link className="signup" to="/login">
-            <button className="button"> Login </button>
+          <Link className="login" to="/Login">
+            <button className="buttons"> Login </button>
           </Link>
+          <ul className='instruction'>
+            <li>
+            Password should have minimum 9 characters with combination of uppercase, lowercase ,numbers and a special character !@#$%*
+            </li>
+          </ul>
         </form>
-        <br />
       </div>
     </>
-  );
+  )
 }

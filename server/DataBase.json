@@ -1,9 +1,9 @@
 {
   "user": [
     {
-      "name": "SharmiRamasamy",
+      "name": "sharmiramasamy",
       "email": "sharmi@gmail.com",
-      "password": "Sharmi@123",
+      "password": "Sharmi@1212",
       "id": 0
     },
     {
@@ -53,42 +53,6 @@
       "email": "Yazhini@gmail.com",
       "password": "Yazhini@123",
       "id": 8
-    },
-    {
-      "name": "ShankarRamasamy",
-      "email": "ShankarRam@gmail.com",
-      "password": "Shankar@2005",
-      "id": 9
-    },
-    {
-      "userName": "kavitha",
-      "userEmail": "kavitha123@gmail.com",
-      "userPassword": "Kavitha@123",
-      "id": 10
-    },
-    {
-      "userName": "Sharmi",
-      "userEmail": "sharmi5803@gmail.com",
-      "userPassword": "Sdgtjkddd@123",
-      "id": 11
-    },
-    {
-      "userName": "Ram",
-      "userEmail": "Renu@gmail.com",
-      "userPassword": "Sharmi@12",
-      "id": 12
-    },
-    {
-      "userName": "Ram",
-      "userEmail": "sharmi@gmail.com",
-      "userPassword": "abcd@123S",
-      "id": 13
-    },
-    {
-      "userName": "Ram",
-      "userEmail": "sharmi@gmail.com",
-      "userPassword": "Ramasamy@123",
-      "id": 14
     }
   ],
   "Category": [

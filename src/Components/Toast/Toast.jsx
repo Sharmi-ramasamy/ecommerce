@@ -9,7 +9,13 @@ export const logoutsuccess = () => {
 };
 
 export const loginsuccess = () => {
-  toast.success("Logout successfull",{
+  toast.success("Login successfull",{
     position:toast.POSITION.TOP_CENTER,
   })
 };
+
+export const signupsuccess = () => {
+  toast.success("Signup successfull",{
+    position:toast.POSITION.TOP_CENTER,
+  })
+}

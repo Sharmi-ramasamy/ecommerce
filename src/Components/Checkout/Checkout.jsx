@@ -4,104 +4,84 @@ import "./Checkout.css";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 import ecomUrl from "../AxiosUrl/Axios";
+import { signupsuccess } from "../Toast/Toast";
 
-export const Checkout = () => {
-    const EmailValid = (email) => {
-        const emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
-        return emailRegex.test(email);
-    };
-
-    const NameValid = (name) => {
-        const nameRegex = /^[a-zA-Z]{8,20}$/;
-        return nameRegex.test(name);
-    };
-
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [address, setAddress] = useState("");
-    const [city, setCity] = useState("");
-    const [state, setState] = useState("");
-    const [zip, setZip] = useState("");
-
-    const [emailError, setEmailError] = useState("");
-    const [nameError, setNameError] = useState("");
-
-    const navigate = useNavigate();
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        let checkout = { name, email, address, city, state, zip };
-        ecomUrl
-            .post("CheckoutDetails", checkout)
-            // {
-            // name:name;
-            // email:email;
-            // address:address;
-            // city:city;
-            // state:state;
-            // zip:zip;
-
-            // })
-            .then(() => {
-                if (checkout) {
-                    navigate("/successpage");
-                }
-            })
-            .catch(() => {
-                alert("Checkout Failed! Try Again.");
-            });
-
-        // CheckPassword();
-        CheckName();
-        CheckEmail();
-    };
-
-    // const EmailValid = (email) => {
-    //     const emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/
-    //     return emailRegex.test(email)
-    // }
-
-    // const PasswordValid = (password) => {
-    //     const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/
-    //     return passwordRegex.test(password)
-    // }
-
-    // const NameValid = (name) => {
-    //     const nameRegex = /^[a-zA-Z]{8,20}$/
-    //     return nameRegex.test(name)
-    // }
-
-    function CheckEmail() {
-        if (!EmailValid(email)) {
-            return setEmailError("Please enter valid email id");
-        } else {
-            return setEmailError(" ");
+export const Checkout =()=>{
+    const [name,setName]=useState("")
+    const [nameError,setNameError]=useState("")
+    const [email,setEmail]=useState("")
+    const [emailError,setEmailError]=useState("")
+    const [setcredError]=useState("")
+    const [address,setAddress]=useState("")
+    const [addressError,setAddressError]=useState("")
+    const [state,setState]=useState("")
+    const [stateError,setStateError]=useState("")
+    const [city,setCity]=useState("")
+    const [cityError,setCityError]=useState("")
+    const [zip,setZip]=useState("")
+    const [zipError,setZipError]=useState("")
+    const navigate=useNavigate()
+    const validateForm=(email,name,address,state,city,zip) =>{
+        if(name==null | name==''){
+            setNameError('Please enter your name')
         }
-    }
-
-    function CheckName() {
-        if (!NameValid(name)) {
-            return setNameError(
-                "UserName should contain Minimum 8 Characters with smallcase or lowercase"
-            );
-        } else {
-            return setNameError(" ");
+        if(email==null | email=='') {
+            setEmailError('Please enter your email')
         }
+        if(address==null | address=='') {
+            setAddressError('Please enter your address')
+        }
+        if(city==null | city=='') {
+            setCityError('Please enter your city')
+        }
+        if(state==null | state=='') {
+            setStateError('Please enter your state')
+        }
+        if(zip==null | zip=='') {
+            setZipError('Please enter your zipcode')
+        }
+        if (
+            email.match(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/)
+        ) {
+            return false;
+        } else {
+            return true;
+        }   
+    };
+
+    const handleSubmit=(e)=>{
+    e.preventDefault();
+    if (validateForm(email,name,address,state,city,zip)) {
+        alert('Enter valid credentials')
+    } else {
+        const userdetails={name,email,address,state,city,zip}
+       signupsuccess();
+        ecomUrl.post('CheckoutDetails',userdetails).then(()=>{
+            navigate('/successpage')
+        }).catch(()=>{
+            alert('server error')
+        })
     }
+    };
 
     return (
-        <div className="checkout-box">
-            <form onSubmit={handleSubmit}>
-                <h3>Billing Address</h3>
-                <label>
-                    {" "}
-                    <i className="fa fa-user"></i> Full Name
+        <>
+         <div className="checkout-box">
+             <form onSubmit={handleSubmit}>
+                 <h3>Billing Address</h3>
+                 <label>
+                     {" "}
+                     <i className="fa fa-user"></i> Full Name
                 </label>
-                <input
+                 <input
                     type="text"
                     name="firstname"
                     placeholder="Full Name"
+                    value={name}
                     onChange={(e) => setName(e.target.value)}
-                    // required
+                    onClick={(e)=>{
+                        e.target.focus(setcredError(null),setEmailError(null))
+                    }}
                 />
                 <strong className="error-msg"> {nameError} </strong>
 
@@ -112,9 +92,12 @@ export const Checkout = () => {
                 <input
                     type="text"
                     name="email"
+                    value={email}
                     placeholder="Email Address"
                     onChange={(e) => setEmail(e.target.value)}
-                    // required
+                    onClick={(e)=>{
+                        e.target.focus(setcredError(null),setNameError(null))
+                    }}
                 />
                 <strong className="error-msg"> {emailError} </strong>
 
@@ -127,8 +110,11 @@ export const Checkout = () => {
                     name="address"
                     placeholder="Address"
                     onChange={(e) => setAddress(e.target.value)}
-                    // required
+                    onClick={(e)=>{
+                        e.target.focus(setcredError(null),setAddressError(null))
+                    }}
                 />
+                 <strong className="error-msg"> {addressError} </strong>
 
                 <label>
                     {" "}
@@ -138,28 +124,36 @@ export const Checkout = () => {
                     type="text"
                     name="city"
                     placeholder="City"
+                    value={city}
                     onChange={(e) => setCity(e.target.value)}
-                    // required
+                    onClick={(e)=>{
+                        e.target.focus(setcredError(null),setCityError(null))
+                    }}
                 />
-
+                <strong className="error-msg"> {cityError} </strong>
                 <label> State </label>
                 <input
                     type="text"
                     name="state"
-                    placeholder="Town"
+                    placeholder="State"
+                    value={state}
                     onChange={(e) => setState(e.target.value)}
-                    // required
+                    onClick={(e)=>{
+                        e.target.focus(setcredError(null),setStateError(null))
+                    }}
                 />
-
+                 <strong className="error-msg"> {stateError} </strong>
                 <label> Zip </label>
                 <input
                     type="text"
                     name="zip"
                     placeholder="Zipcode"
                     onChange={(e) => setZip(e.target.value)}
-                    // required
+                    onClick={(e)=>{
+                        e.target.focus(setcredError(null),setZipError(null))
+                    }}
                 />
-
+                 <strong className="error-msg"> {zipError} </strong>
                 <button className="buttons" type="submit">
                     Continue to Checkout
                 </button>
@@ -167,5 +161,7 @@ export const Checkout = () => {
                 <p> * Only Cash on Delivery Available</p>
             </form>
         </div>
-    );
-};
+        
+        </>
+    )
+}

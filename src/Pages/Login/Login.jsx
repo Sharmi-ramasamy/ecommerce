@@ -2,10 +2,18 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { Link } from "react-router-dom";
-// import { Toast } from "../../Components/Toast/Toast";
 import ecomUrl from "../../Components/AxiosUrl/Axios";
 
 export default function Login() {
+  const navigate = useNavigate();
+  const [useremail, setUserEmail] = useState("");
+  const [userpassword, setUserPassword] = useState("");
+  const [Error, setError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [, setIsLoggedin] = useState(false);
+  const [show, setShow] = useState("");
+
   const EmailValid = (email) => {
     const emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
     return emailRegex.test(email);
@@ -15,16 +23,6 @@ export default function Login() {
       /^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/;
     return passwordRegex.test(password);
   };
-
-  const navigate = useNavigate();
-  const [useremail, setUserEmail] = useState("");
-  const [userpassword, setUserPassword] = useState("");
-  const [Error, setError] = useState("");
-
-  const [emailError, setEmailError] = useState("");
-  const [passwordError, setPasswordError] = useState("");
-  const [, setIsLoggedin] = useState(false);
-
   const handleSubmit = (event) => {
     event.preventDefault();
     ecomUrl
@@ -34,8 +32,7 @@ export default function Login() {
           setIsLoggedin(true);
           sessionStorage.setItem("id", res.data[0].id);
           sessionStorage.setItem("email", res.data[0].email);
-          // alert("Login successful");
-          // Toast();
+          alert("Login successful");
           navigate("/");
         } else {
           setError("Invalid credentials");
@@ -72,29 +69,36 @@ export default function Login() {
     <>
       <div className="login-box">
         <h1> Login </h1>
-        {/* {Toast()} */}
         <form onSubmit={handleSubmit}>
           <label> Email </label>
           <input
             type="text"
             placeholder="Enter Email Id "
             name="email"
+            value={useremail}
             onChange={(e) => setUserEmail(e.target.value)}
-            required
           />
           <strong className="error-msg"> {emailError} </strong>
 
           <label> Password</label>
           <input
-            type="password"
+            type={show ? "text" : "password"}
+            value={userpassword}
             placeholder="Enter password"
             name="password"
             onChange={(e) => setUserPassword(e.target.value)}
           />
+          <p onClick={() => setShow((prestate) => !prestate)}>
+            <i
+              className="fa fa-eye fa-fw"
+              id="togglePassword"
+              aria-hidden="true"
+            ></i>
+          </p>
           <strong className="error-msg"> {passwordError} </strong>
           {Error && <p style={{ color: "red" }}> {Error} </p>}
 
-          <button className="buttons" type="submit" disabled={!useremail}>
+          <button className="buttons" type="submit">
             Login
           </button>
 

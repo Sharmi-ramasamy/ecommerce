@@ -9,14 +9,12 @@ import { Checkout } from "./Components/Checkout/Checkout";
 import { Successpage } from "./Components/Checkout/Successpage";
 import { Error } from "./Components/Error/Error";
 import { Navbar } from "./Components/Navbar/Navbar";
-// import { Search } from "./Components/Search/Search";
 import { SubCategory } from "./Components/SubCategory/SubCategory";
-// import { Toast } from "./Components/Toast/Toast";
 import Home from "./Pages/Homepage/Home";
 import Login from "./Pages/Login/Login";
-import { AddUser } from "./Pages/Signup/AddUser";
 import { ChangePassword } from "./Pages/Signup/ChangePassword";
-import Signup from "./Pages/Signup/Signup";
+import { Signup } from "./Pages/Signup/Signup";
+
 
 export const Routing = () => {
   return (
@@ -26,7 +24,6 @@ export const Routing = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
         <Route path="/category" element={<Category />} />
         <Route path="/category/:id" element={<SubCategory />} />
         <Route path="cart" element={<Cart />} />
@@ -34,8 +31,7 @@ export const Routing = () => {
         <Route path="/changepassword" element={<ChangePassword />} />
         <Route path="/checkout" element={<Checkout/>}/>
         <Route path="/successpage" element={<Successpage/>}/>
-        <Route path="/adduser" element={<AddUser/>}/>
-        {/* <Route path='/search' element={<Search/>}/> */}
+        <Route path="/signup" element={<Signup/>}/>
       </Routes>
 
     </>

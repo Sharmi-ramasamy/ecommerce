@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React from "react";
 import "./SubCategory.css";
 import { useState, useEffect } from "react";
@@ -40,42 +39,9 @@ export const SubCategory = () => {
   const categoryName = params.id;
   const [categoryname, setcategoryname] = useState([]);
   const [getproduct, setGetproduct] = useState([]);
-  // const [name, setName] = useState("");
   return (
     <>
-      {/* {categoryName} */}
-      {/* {categoryname} */}
-      
       <div className="wrapper">
-        {/* <div id="search-container">
-          <input
-            type="text"
-            value={name}
-            id="search-input"
-            placeholder="Search product"
-            onChange={(e) => setName(e.target.value)}
-          />
-          <button id="search"> Search </button>
-          {getproduct
-            .filter((e) => {
-              if (
-                e.name.toLowerCase().includes(name.toLowerCase()) 
-               && e.category==categoryName
-              ) {
-                return e;
-              }
-            })
-            .map((e, i) => {
-              return (
-                <div key={i}>
-                  <img
-                    src={e.image}
-                    style={{ height: "500px", width: "500px" }}
-                  />
-                </div>
-              );
-            })}
-        </div> */}
         <h2> Filter Products: </h2>
         <div>
           {items
@@ -95,7 +61,6 @@ export const SubCategory = () => {
               </div>
             ))}
         </div>
-        
 
         <div className="products">
           {getproduct

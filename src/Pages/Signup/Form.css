@@ -1,5 +1,4 @@
 body {
-    /* background-image:url() ; */
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -14,6 +13,16 @@ body {
     border-radius: 30px;
 }
 
+.login-box {
+    margin-top: 50px;
+    width: 400px;
+    height: 400px;
+    margin-left: 450px;
+    background-color: #fffdd0;
+    box-shadow: 5px 5px 5px 5px silver;
+    border-radius: 30px;
+  }
+
 .change-box {
     margin-top: 50px;
     width: 360px;
@@ -23,6 +32,16 @@ body {
     box-shadow: 5px 5px 5px 5px silver;
     border-radius: 30px;
 }
+
+.checkout-box {
+    margin-top: 10px;
+    width: 400px;
+    height: 700px;
+    margin-left: 450px;
+    background-color: #FFFDD0;
+    box-shadow: 5px 5px 5px 5px silver;
+    border-radius: 30px;
+    }
 
 h1 {
     text-align: center;

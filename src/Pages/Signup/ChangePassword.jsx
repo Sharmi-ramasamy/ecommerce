@@ -8,10 +8,10 @@ export const ChangePassword = () => {
   const userId = sessionStorage.getItem("id");
   const [name, setName] = useState();
   const [email, setEmail] = useState();
-  const [nameErr, setNameErr] = useState();
+  const [nameError, setNameError] = useState();
   const [newPassword, setNewPassword] = useState("");
   const [confmPassword, setConfPassword] = useState("");
-  const [regErr, setregErr] = useState(null);
+  const [regError, setregError] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,17 +28,11 @@ export const ChangePassword = () => {
   const changepassword = (e) => {
     e.preventDefault();
     if (!name.match(/^[a-zA-Z]{8,20}$/)) {
-      setNameErr(
-        "UserName should contain Minimum 8 Characters with lowercase,uppercase or combination of it"
-      );
+      setNameError("UserName should contain Minimum 8 Characters with lowercase,uppercase or combination of it");
     }
     if (
-      newPassword.match(
-        /^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/
-      ) &&
-      confmPassword.match(
-        /^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/
-      )
+      newPassword.match(/^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/) &&
+      confmPassword.match(/^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/)
     ) {
       if (confmPassword == newPassword) {
         let password = confmPassword;
@@ -48,12 +42,10 @@ export const ChangePassword = () => {
         });
         navigate("/");
       } else {
-        alert(
-          "New Password and Confirm Password Does not Match. Re-Enter it Correctly"
-        );
+        alert("New Password and Confirm Password Does not Match. Re-Enter it Correctly");
       }
     } else {
-      setregErr(
+      setregError(
         "Password should have minimum 9 characters with combination of uppercase, lowercase ,numbers and a special character '!@#$%*' "
       );
     }
@@ -75,7 +67,7 @@ export const ChangePassword = () => {
             setName(e.target.value);
           }}
         ></input>
-        <strong className="error-msg">{nameErr && <p>{nameErr}</p>}</strong>
+        <strong className="error-msg">{nameError && <p>{nameError}</p>}</strong>
         <label>New Password</label>
         <input
           type="password"
@@ -85,7 +77,7 @@ export const ChangePassword = () => {
           }}
           value={newPassword}
         ></input>
-        <strong className="error-msg">{regErr && <p>{regErr}</p>}</strong>
+        <strong className="error-msg">{regError && <p>{regError}</p>}</strong>
         <label>Confirm Password</label>
         <input
           type="password"
@@ -95,7 +87,7 @@ export const ChangePassword = () => {
             setConfPassword(e.target.value);
           }}
         ></input>
-        <strong className="error-msg">{regErr && <p>{regErr}</p>}</strong>
+        <strong className="error-msg">{regError && <p>{regError}</p>}</strong>
         <input type="submit" value="Save Changes" className="button"></input>
       </form>
     </div>

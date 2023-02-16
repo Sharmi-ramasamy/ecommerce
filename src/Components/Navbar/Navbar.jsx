@@ -6,16 +6,6 @@ import { logoutsuccess } from "../Toast/Toast";
 
 export const Navbar = (productItem) => {
   const navigate = useNavigate();
-
-  // const handleChange = () => {
-  //   console.log("done");
-  //   if (sessionStorage.getItem("email")) {
-  //     navigate("/category");
-  //   } else {
-  //     navigate("/login");
-  //   }
-  // };
-
   const handleClick = () => {
     if (sessionStorage.getItem("email")) {
       sessionStorage.clear();

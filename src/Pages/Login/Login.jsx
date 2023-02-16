@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Login.css";
+// import "./Login.css";
+// import "../Signup/Signup.css";
 import { Link } from "react-router-dom";
 import ecomUrl from "../../Components/AxiosUrl/Axios";
 
@@ -11,7 +12,6 @@ export default function Login() {
   const [Error, setError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [, setIsLoggedin] = useState(false);
   const [show, setShow] = useState("");
 
   const EmailValid = (email) => {
@@ -19,8 +19,7 @@ export default function Login() {
     return emailRegex.test(email);
   };
   const PasswordValid = (password) => {
-    const passwordRegex =
-      /^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/;
+    const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/;
     return passwordRegex.test(password);
   };
   const handleSubmit = (event) => {
@@ -29,7 +28,6 @@ export default function Login() {
       .get("user?email=" + useremail)
       .then((res) => {
         if (res.data[0].password == userpassword) {
-          setIsLoggedin(true);
           sessionStorage.setItem("id", res.data[0].id);
           sessionStorage.setItem("email", res.data[0].email);
           alert("Login successful");
@@ -37,7 +35,6 @@ export default function Login() {
         } else {
           setError("Invalid credentials");
           alert("Please Enter the Valid Credentials");
-          // navigate('/signup')
         }
       })
       .catch((err) => {
@@ -89,21 +86,17 @@ export default function Login() {
             onChange={(e) => setUserPassword(e.target.value)}
           />
           <p onClick={() => setShow((prestate) => !prestate)}>
-            <i
-              className="fa fa-eye fa-fw"
-              id="togglePassword"
-              aria-hidden="true"
-            ></i>
+            <i className="fa fa-eye fa-fw" id="togglePassword" aria-hidden="true"></i>
           </p>
           <strong className="error-msg"> {passwordError} </strong>
           {Error && <p style={{ color: "red" }}> {Error} </p>}
 
-          <button className="buttons" type="submit">
+          <button className="button" type="submit">
             Login
           </button>
 
           <Link className="signup" to="/signup">
-            <button className="buttons"> Sign Up </button>
+            <button className="button"> Sign Up </button>
           </Link>
         </form>
       </div>

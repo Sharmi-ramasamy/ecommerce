@@ -19,7 +19,7 @@
       "id": 2
     },
     {
-      "name": "Ramasamy",
+      "name": "ramasamy",
       "email": "Ramasamy@gmail.com",
       "password": "Ramasamy@1212",
       "id": 3
@@ -713,7 +713,7 @@
       "category": "Shoes",
       "SubCategory": "ShoesKids",
       "name": "Kids Shoes",
-      "price":499,
+      "price": 499,
       "desc": "HOOH Kids Latest Fashion LED Light Sneakers Sports Shoes",
       "image": "https://m.media-amazon.com/images/I/71NONMzotxL._UL1500_.jpg"
     },
@@ -890,5 +890,15 @@
     }
   ],
   "AddToCart": [],
-  "CheckoutDetails": []
+  "CheckoutDetails": [
+    {
+      "name": "sharmi",
+      "email": "sharmi@gmail.com",
+      "address": "KG Palayam",
+      "state": "Tamilnadu",
+      "city": "Erode",
+      "zip": "53432",
+      "id": 1
+    }
+  ]
 }

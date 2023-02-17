@@ -1,10 +1,9 @@
 import React from "react";
-// import "./Checkout.css";
 import "../../Pages/Signup/Form.css";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 import ecomUrl from "../AxiosUrl/Axios";
-import { signupsuccess } from "../Toast/Toast";
+import Toast from "../../Components/Toast/Toast";
 
 export const Checkout = () => {
   const [name, setName] = useState("");
@@ -50,17 +49,17 @@ export const Checkout = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm(email, name, address, state, city, zip)) {
-      alert("Enter valid credentials");
+      Toast("Enter valid credentials", "error");
     } else {
       const userdetails = { name, email, address, state, city, zip };
-      signupsuccess();
       ecomUrl
         .post("CheckoutDetails", userdetails)
         .then(() => {
           navigate("/successpage");
+          Toast("Checkout Successful", "success");
         })
         .catch(() => {
-          alert("server error");
+          Toast("Server Error", "error");
         });
     }
   };
@@ -71,7 +70,6 @@ export const Checkout = () => {
         <form onSubmit={handleSubmit}>
           <h3>Billing Address</h3>
           <label>
-            {" "}
             <i className="fa fa-user"></i> Full Name
           </label>
           <input
@@ -87,7 +85,6 @@ export const Checkout = () => {
           <strong className="error-msg"> {nameError} </strong>
 
           <label>
-            {" "}
             <i className="fa fa-envelope"></i> Email
           </label>
           <input
@@ -103,7 +100,6 @@ export const Checkout = () => {
           <strong className="error-msg"> {emailError} </strong>
 
           <label>
-            {" "}
             <i className="fa fa-address-card"></i> Address
           </label>
           <input
@@ -118,7 +114,6 @@ export const Checkout = () => {
           <strong className="error-msg"> {addressError} </strong>
 
           <label>
-            {" "}
             <i className="fa fa-institution"></i> City
           </label>
           <input
@@ -132,7 +127,9 @@ export const Checkout = () => {
             }}
           />
           <strong className="error-msg"> {cityError} </strong>
-          <label> State </label>
+          <label>
+            <i className="fas fa-city"></i> State
+          </label>
           <input
             type="text"
             name="state"
@@ -144,7 +141,9 @@ export const Checkout = () => {
             }}
           />
           <strong className="error-msg"> {stateError} </strong>
-          <label> Zip </label>
+          <label>
+            <i className="fa-solid fa-location-pin"></i> Zip
+          </label>
           <input
             type="text"
             name="zip"

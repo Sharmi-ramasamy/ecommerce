@@ -57,7 +57,7 @@ export const Cart = () => {
     ecomUrl.delete("AddToCart/" + productItem.id);
     setTimeout(() => {
       loadData();
-    }, 500);
+    }, 200);
   };
 
   const clearCart = () => {
@@ -72,21 +72,16 @@ export const Cart = () => {
       });
     setTimeout(() => {
       loadData();
-    }, 500);
+    }, 100);
   };
 
-  const TotalPrice = getProduct.reduce(
-    (price, value) => price + value.price * value.quantity,
-    0
-  );
+  const totalPrice = getProduct.reduce((price, value) => price + value.price * value.quantity, 0);
   return (
     <>
       <div className="cart-items">
         <h2 className="cart-items-header"> Cart Items </h2>
         <div className="cart-length">
-          {getProduct.length === 0 && (
-            <div className="cart-items-empty"> Cart is Empty. </div>
-          )}
+          {getProduct.length === 0 && <div className="cart-items-empty"> Cart is Empty. </div>}
         </div>
         <div className="clear-cart">
           {getProduct.length >= 1 && (
@@ -105,29 +100,16 @@ export const Cart = () => {
             })
             .map((value) => (
               <div key={value.id} className="cart-items-list">
-                <img
-                  className="cart-items-image"
-                  src={value.image}
-                  alt={value.name}
-                />
+                <img className="cart-items-image" src={value.image} alt={value.name} />
                 <div className="cart-items-name"> {value.name} </div>
                 <div className="cart-items-function">
-                  <button
-                    className="cart-items-increase"
-                    onClick={() => increaseProduct(value)}
-                  >
+                  <button className="cart-items-increase" onClick={() => increaseProduct(value)}>
                     +
                   </button>
-                  <button
-                    className="cart-items-decrease"
-                    onClick={() => decreaseProduct(value)}
-                  >
+                  <button className="cart-items-decrease" onClick={() => decreaseProduct(value)}>
                     -
                   </button>
-                  <button
-                    className="cart-items-remove"
-                    onClick={() => removeProduct(value)}
-                  >
+                  <button className="cart-items-remove" onClick={() => removeProduct(value)}>
                     Remove
                   </button>
                 </div>
@@ -140,14 +122,11 @@ export const Cart = () => {
             ))}
         </div>
 
-        <div className="cart-items-total-price-name">
-          Total Price: {TotalPrice}
-        </div>
+        <div className="cart-items-total-price-name">Total Price: {totalPrice}</div>
       </div>
 
       <button id="checkout" onClick={() => navigate("/checkout")}>
-        {" "}
-        Checkout{" "}
+        Checkout
       </button>
     </>
   );

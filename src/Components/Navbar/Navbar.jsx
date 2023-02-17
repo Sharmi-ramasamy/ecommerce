@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
-import { logoutsuccess } from "../Toast/Toast";
+import Toast from "../../Components/Toast/Toast";
 
 export const Navbar = (productItem) => {
   const navigate = useNavigate();
   const handleClick = () => {
     if (sessionStorage.getItem("email")) {
       sessionStorage.clear();
-      logoutsuccess();
+      Toast("Logout Successful", "success");
       navigate("/");
     } else {
       navigate("/logout");
@@ -38,9 +38,7 @@ export const Navbar = (productItem) => {
           <li>
             <Link to="/cart" className="cart" title="Add to cart">
               <i className="fas fa-shopping-cart" />
-              <span className="cart-length">
-                {productItem.length === 0 ? "" : productItem.length}
-              </span>
+              <span className="cart-length">{productItem.length === 0 ? "" : productItem.length}</span>
             </Link>
           </li>
 
@@ -48,24 +46,13 @@ export const Navbar = (productItem) => {
             {store === null ? (
               <Link to="/login"> Login </Link>
             ) : (
-              <Link
-                to="/"
-                className="logout"
-                title="Logout"
-                onClick={handleClick}
-              >
+              <Link to="/" className="logout" title="Logout" onClick={handleClick}>
                 <i className="fa fa-sign-out-alt" />
               </Link>
             )}
           </li>
 
-          <li>
-            {store === null ? (
-              ""
-            ) : (
-              <Link to="/changepassword">Change Password</Link>
-            )}
-          </li>
+          <li>{store === null ? "" : <Link to="/changepassword">Change Password</Link>}</li>
         </ul>
       </div>
     </header>

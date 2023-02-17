@@ -5,8 +5,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import ecomUrl from "../AxiosUrl/Axios";
 
 export const Category = () => {
-  const navigate = useNavigate();
   const [items, setItems] = useState();
+  const navigate = useNavigate();
   const params = useParams();
   useEffect(() => {
     ecomUrl.get("Category").then((response) => {

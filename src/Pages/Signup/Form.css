@@ -1,99 +1,103 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .signup-box {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 360px;
-    height: 590px;
-    margin-left: 450px;
-    background-color: #FFFDD0;
-    box-shadow: 5px 5px 5px 5px silver;
-    border-radius: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 360px;
+  height: 590px;
+  margin-left: 450px;
+  background-color: #fffdd0;
+  box-shadow: 5px 5px 5px 5px silver;
+  border-radius: 30px;
 }
 
 .login-box {
-    margin-top: 50px;
-    width: 400px;
-    height: 400px;
-    margin-left: 450px;
-    background-color: #fffdd0;
-    box-shadow: 5px 5px 5px 5px silver;
-    border-radius: 30px;
-  }
+  margin-top: 50px;
+  width: 400px;
+  height: 400px;
+  margin-left: 450px;
+  background-color: #fffdd0;
+  box-shadow: 5px 5px 5px 5px silver;
+  border-radius: 30px;
+}
 
 .change-box {
-    margin-top: 50px;
-    width: 360px;
-    height: 500px;
-    margin-left: 450px;
-    background-color: #FFFDD0;
-    box-shadow: 5px 5px 5px 5px silver;
-    border-radius: 30px;
+  margin-top: 50px;
+  width: 360px;
+  height: 500px;
+  margin-left: 450px;
+  background-color: #fffdd0;
+  box-shadow: 5px 5px 5px 5px silver;
+  border-radius: 30px;
 }
 
 .checkout-box {
-    margin-top: 10px;
-    width: 400px;
-    height: 700px;
-    margin-left: 450px;
-    background-color: #FFFDD0;
-    box-shadow: 5px 5px 5px 5px silver;
-    border-radius: 30px;
-    }
-
-h1 {
-    text-align: center;
-    padding-top: 15px;
+  margin-top: 10px;
+  width: 400px;
+  height: 700px;
+  margin-left: 450px;
+  background-color: #fffdd0;
+  box-shadow: 5px 5px 5px 5px silver;
+  border-radius: 30px;
 }
 
-h3{
-    text-align: center;
-    padding-top: 15px;
+h1 {
+  text-align: center;
+  padding-top: 15px;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 15px;
 }
 
 h4 {
-    text-align: center;
+  text-align: center;
 }
 
 form {
-    width: 300px;
-    margin-left: 20px;
+  width: 300px;
+  margin-left: 20px;
 }
 
 form label {
-    display: flex;
-    margin-top: 20px;
-    font-size: 18px;
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
 }
 
 form input {
-    width: 100%;
-    padding: 7px;
-    border: none;
-    border: 1px solid gray;
-    border-radius: 6px;
-    outline: none;
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
 }
 
 .button {
-    width: 290px;
-    height: 35px;
-    border-radius: 10px;
-    margin-top: 20px;
-    border: none;
-    background-color: #49c1a2;
-    color: white;
-    font-size: 18px;
+  width: 290px;
+  height: 35px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: none;
+  background-color: #49c1a2;
+  color: white;
+  font-size: 18px;
 }
 
 .button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-.instruction{
-    color: crimson;
-    margin-top: 20px;
-    font-weight:600;
+.instruction {
+  color: crimson;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.error-msg {
+  color: crimson;
 }

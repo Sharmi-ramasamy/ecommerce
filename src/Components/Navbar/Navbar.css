@@ -1,54 +1,54 @@
 .headers {
-    top: 0;
-    min-height: 65px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    background-color: #0f3460;
+  top: 0;
+  min-height: 65px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0f3460;
 }
 
 .logo {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    padding-left: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  padding-left: 40px;
 }
 
 .headers-links {
-    display: flex;
+  display: flex;
 }
 
 .headers-links ul li {
-    list-style: none;
-    display: inline-block;
-    font-size: 18px;
+  list-style: none;
+  display: inline-block;
+  font-size: 18px;
 }
 
 .headers-links ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    padding: 0px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 0px 15px;
 }
 
 .headers-links ul li a:hover {
-    color: crimson;
+  color: crimson;
 }
 
 .headers-links ul li .logout {
-    color: red;
+  color: red;
 }
 
 .headers-links ul li .logout:hover {
-    color: white;
+  color: white;
 }
 
 .cart-length {
-    margin: 3px;
-    font-size: 14px;
-    font-weight: 700;
-    vertical-align: super;
-    color: red;
+  margin: 3px;
+  font-size: 14px;
+  font-weight: 700;
+  vertical-align: super;
+  color: red;
 }

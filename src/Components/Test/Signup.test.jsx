@@ -25,7 +25,6 @@ describe("<Signup />", () => {
 
 describe("<Signup />", () => {
   test("render name input", () => {
-    // render(<Signup />);
     render(
       <MemoryRouter>
         <Signup />

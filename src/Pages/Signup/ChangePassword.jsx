@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import ecomUrl from "../../Components/AxiosUrl/Axios";
+import Toast from "../../Components/Toast/Toast";
 
 export const ChangePassword = () => {
   const userId = sessionStorage.getItem("id");
@@ -10,7 +11,7 @@ export const ChangePassword = () => {
   const [email, setEmail] = useState();
   const [nameError, setNameError] = useState();
   const [newPassword, setNewPassword] = useState("");
-  const [confmPassword, setConfPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [regError, setregError] = useState(null);
   const navigate = useNavigate();
 
@@ -32,17 +33,17 @@ export const ChangePassword = () => {
     }
     if (
       newPassword.match(/^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/) &&
-      confmPassword.match(/^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/)
+      confirmPassword.match(/^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/)
     ) {
-      if (confmPassword == newPassword) {
-        let password = confmPassword;
+      if (confirmPassword == newPassword) {
+        let password = confirmPassword;
         const user = { name, email, password };
         ecomUrl.put("user/" + userId, user).then(() => {
-          alert("Password Changed Successfully");
+          Toast("Password Changed Successfully", "success");
         });
         navigate("/");
       } else {
-        alert("New Password and Confirm Password Does not Match. Re-Enter it Correctly");
+        Toast("New Password and Confirm Password Does not Match. Re-Enter it Correctly", "error");
       }
     } else {
       setregError(
@@ -82,9 +83,9 @@ export const ChangePassword = () => {
         <input
           type="password"
           placeholder="Re-Enter New Password"
-          value={confmPassword}
+          value={confirmPassword}
           onChange={(e) => {
-            setConfPassword(e.target.value);
+            setConfirmPassword(e.target.value);
           }}
         ></input>
         <strong className="error-msg">{regError && <p>{regError}</p>}</strong>

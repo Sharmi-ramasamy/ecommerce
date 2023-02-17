@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import ecomUrl from "../../Components/AxiosUrl/Axios";
 import { Link } from "react-router-dom";
 import "./Form.css";
-import { signupsuccess } from "../../Components/Toast/Toast";
+import Toast from "../../Components/Toast/Toast";
 
 export const Signup = () => {
   const [name, setName] = useState("");
@@ -41,14 +41,14 @@ export const Signup = () => {
       alert("Enter valid credentials");
     } else {
       const user = { name, email, password };
-      signupsuccess();
+      Toast("Signup Successful", "success");
       ecomUrl
         .post("user", user)
         .then(() => {
           navigate("/userlog");
         })
         .catch(() => {
-          alert("server error");
+          Toast("Server Error", "warning");
         });
     }
   };

@@ -3,10 +3,9 @@ import "./SubCategory.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ecomUrl from "../AxiosUrl/Axios";
-
+import Toast from "../../Components/Toast/Toast";
 export const SubCategory = () => {
   const [items, setItems] = useState([]);
-
   const params = useParams();
 
   useEffect(() => {
@@ -33,7 +32,7 @@ export const SubCategory = () => {
       quantity: 1,
       value: productItem.price,
     });
-    alert("Item Added to the Cart Succesfully");
+    Toast("Item Added to the Cart Successfully", "success");
   };
 
   const categoryName = params.id;
@@ -52,10 +51,7 @@ export const SubCategory = () => {
             })
             .map((val) => (
               <div key={val.id}>
-                <button
-                  id="buttons"
-                  onClick={() => setcategoryname(val.subcategory)}
-                >
+                <button id="buttons" onClick={() => setcategoryname(val.subcategory)}>
                   {val.subcategory}
                 </button>
               </div>
@@ -72,11 +68,7 @@ export const SubCategory = () => {
             .map((productItem) => (
               <div key={productItem.id} className="productcards">
                 <div>
-                  <img
-                    className="products-images"
-                    src={productItem.image}
-                    alt={productItem.name}
-                  />
+                  <img className="products-images" src={productItem.image} alt={productItem.name} />
                 </div>
                 <div>
                   <h3 className="product-name"> {productItem.name} </h3>
@@ -93,10 +85,7 @@ export const SubCategory = () => {
                   <i className="fa fa-star"></i>
                 </div>
                 <div>
-                  <button
-                    className="product-add-button"
-                    onClick={() => addProduct(productItem)}
-                  >
+                  <button className="product-add-button" onClick={() => addProduct(productItem)}>
                     Add to Cart
                   </button>
                 </div>

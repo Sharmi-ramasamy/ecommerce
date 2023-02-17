@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import "./Login.css";
-// import "../Signup/Signup.css";
+import "../Signup/Form.css";
 import { Link } from "react-router-dom";
 import ecomUrl from "../../Components/AxiosUrl/Axios";
+import Toast from "../../Components/Toast/Toast";
 
 export default function Login() {
   const navigate = useNavigate();
   const [useremail, setUserEmail] = useState("");
   const [userpassword, setUserPassword] = useState("");
-  const [Error, setError] = useState("");
+  const [error, setError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [show, setShow] = useState("");
@@ -30,11 +30,11 @@ export default function Login() {
         if (res.data[0].password == userpassword) {
           sessionStorage.setItem("id", res.data[0].id);
           sessionStorage.setItem("email", res.data[0].email);
-          alert("Login successful");
+          Toast("Login Successful", "success");
           navigate("/");
         } else {
           setError("Invalid credentials");
-          alert("Please Enter the Valid Credentials");
+          Toast("Please Enter Valid Credentials", "warning");
         }
       })
       .catch((err) => {
@@ -89,7 +89,7 @@ export default function Login() {
             <i className="fa fa-eye fa-fw" id="togglePassword" aria-hidden="true"></i>
           </p>
           <strong className="error-msg"> {passwordError} </strong>
-          {Error && <p style={{ color: "red" }}> {Error} </p>}
+          {error && <p style={{ color: "red" }}> {error} </p>}
 
           <button className="button" type="submit">
             Login

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React from "react";
 // eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -15,11 +14,10 @@ import Login from "./Pages/Login/Login";
 import { ChangePassword } from "./Pages/Signup/ChangePassword";
 import { Signup } from "./Pages/Signup/Signup";
 
-
 export const Routing = () => {
   return (
     <>
-    <ToastContainer/>
+      <ToastContainer />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -29,11 +27,10 @@ export const Routing = () => {
         <Route path="cart" element={<Cart />} />
         <Route path="*" element={<Error />} />
         <Route path="/changepassword" element={<ChangePassword />} />
-        <Route path="/checkout" element={<Checkout/>}/>
-        <Route path="/successpage" element={<Successpage/>}/>
-        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/successpage" element={<Successpage />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
-
     </>
   );
 };

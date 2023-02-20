@@ -13,6 +13,7 @@ import Home from "./Pages/Homepage/Home";
 import Login from "./Pages/Login/Login";
 import { ChangePassword } from "./Pages/Signup/ChangePassword";
 import { Signup } from "./Pages/Signup/Signup";
+import { ProtectedLogin } from "./ProtectedLogin/ProtectedLogin";
 
 export const Routing = () => {
   return (
@@ -21,9 +22,17 @@ export const Routing = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/login"
+          element={
+            <ProtectedLogin>
+              <Login />
+            </ProtectedLogin>
+          }
+        />
         <Route path="/category" element={<Category />} />
         <Route path="/category/:id" element={<SubCategory />} />
+        <Route path="/category/:id/:subcat" element={<SubCategory />} />
         <Route path="cart" element={<Cart />} />
         <Route path="*" element={<Error />} />
         <Route path="/changepassword" element={<ChangePassword />} />

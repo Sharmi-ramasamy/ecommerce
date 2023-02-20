@@ -1,12 +1,11 @@
 import React from "react";
 import "./SubCategory.css";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import ecomUrl from "../AxiosUrl/Axios";
 import Toast from "../../Components/Toast/Toast";
 export const SubCategory = () => {
   const [items, setItems] = useState([]);
-  const params = useParams();
 
   useEffect(() => {
     loaddata();
@@ -34,9 +33,9 @@ export const SubCategory = () => {
     });
     Toast("Item Added to the Cart Successfully", "success");
   };
-
-  const categoryName = params.id;
-  const [categoryname, setcategoryname] = useState([]);
+  const { id, subcat } = useParams();
+  const navigate = useNavigate();
+  const categoryName = id;
   const [getproduct, setGetproduct] = useState([]);
   return (
     <>
@@ -51,7 +50,7 @@ export const SubCategory = () => {
             })
             .map((val) => (
               <div key={val.id}>
-                <button id="buttons" onClick={() => setcategoryname(val.subcategory)}>
+                <button id="buttons" onClick={() => navigate(`/category/${categoryName}/${val.subcategory}`)}>
                   {val.subcategory}
                 </button>
               </div>
@@ -61,7 +60,7 @@ export const SubCategory = () => {
         <div className="products">
           {getproduct
             .filter((subcategoryitem) => {
-              if (categoryname == subcategoryitem.SubCategory) {
+              if (subcat == subcategoryitem.SubCategory) {
                 return subcategoryitem;
               }
             })

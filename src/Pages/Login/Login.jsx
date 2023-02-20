@@ -73,6 +73,7 @@ export default function Login() {
             placeholder="Enter Email Id "
             name="email"
             value={useremail}
+            data-testid="email-test"
             onChange={(e) => setUserEmail(e.target.value)}
           />
           <strong className="error-msg"> {emailError} </strong>
@@ -83,6 +84,7 @@ export default function Login() {
             value={userpassword}
             placeholder="Enter password"
             name="password"
+            data-testid="password-test"
             onChange={(e) => setUserPassword(e.target.value)}
           />
           <p onClick={() => setShow((prestate) => !prestate)}>

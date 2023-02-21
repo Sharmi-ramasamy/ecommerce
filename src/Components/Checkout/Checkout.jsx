@@ -77,6 +77,7 @@ export const Checkout = () => {
             name="firstname"
             placeholder="Full Name"
             value={name}
+            data-testid="name-test"
             onChange={(e) => setName(e.target.value)}
             onClick={(e) => {
               e.target.focus(setcredError(null), setEmailError(null));
@@ -92,6 +93,7 @@ export const Checkout = () => {
             name="email"
             value={email}
             placeholder="Email Address"
+            data-testid="email-test"
             onChange={(e) => setEmail(e.target.value)}
             onClick={(e) => {
               e.target.focus(setcredError(null), setNameError(null));
@@ -106,6 +108,7 @@ export const Checkout = () => {
             type="text"
             name="address"
             placeholder="Address"
+            data-testid="address-test"
             onChange={(e) => setAddress(e.target.value)}
             onClick={(e) => {
               e.target.focus(setcredError(null), setAddressError(null));
@@ -121,6 +124,7 @@ export const Checkout = () => {
             name="city"
             placeholder="City"
             value={city}
+            data-testid="city-test"
             onChange={(e) => setCity(e.target.value)}
             onClick={(e) => {
               e.target.focus(setcredError(null), setCityError(null));
@@ -135,6 +139,7 @@ export const Checkout = () => {
             name="state"
             placeholder="State"
             value={state}
+            data-testid="state-test"
             onChange={(e) => setState(e.target.value)}
             onClick={(e) => {
               e.target.focus(setcredError(null), setStateError(null));
@@ -148,6 +153,7 @@ export const Checkout = () => {
             type="text"
             name="zip"
             placeholder="Zipcode"
+            data-testid="zip-test"
             onChange={(e) => setZip(e.target.value)}
             onClick={(e) => {
               e.target.focus(setcredError(null), setZipError(null));

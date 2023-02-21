@@ -38,7 +38,7 @@ export const Signup = () => {
   const adduser = (e) => {
     e.preventDefault();
     if (validateForm(email, password, name)) {
-      alert("Enter valid credentials");
+      Toast("Enter valid credentials", "error");
     } else {
       const user = { name, email, password };
       Toast("Signup Successful", "success");

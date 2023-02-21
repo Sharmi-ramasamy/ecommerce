@@ -64,6 +64,7 @@ export const ChangePassword = () => {
         <input
           type="text"
           placeholder="Enter Name"
+          data-testid="name-test"
           onChange={(e) => {
             setName(e.target.value);
           }}
@@ -73,6 +74,7 @@ export const ChangePassword = () => {
         <input
           type="password"
           placeholder="Enter New Password"
+          data-testid="password-test"
           onChange={(e) => {
             setNewPassword(e.target.value);
           }}
@@ -84,6 +86,7 @@ export const ChangePassword = () => {
           type="password"
           placeholder="Re-Enter New Password"
           value={confirmPassword}
+          data-testid="confirmPassword-test"
           onChange={(e) => {
             setConfirmPassword(e.target.value);
           }}

@@ -1,9 +1,9 @@
 {
   "user": [
     {
-      "name": "sharmiramasamy",
+      "name": "ramkaviramas",
       "email": "sharmi@gmail.com",
-      "password": "Sharmi@1212",
+      "password": "Sharmi@123",
       "id": 0
     },
     {
@@ -890,15 +890,5 @@
     }
   ],
   "AddToCart": [],
-  "CheckoutDetails": [
-    {
-      "name": "sharmi",
-      "email": "sharmi@gmail.com",
-      "address": "KG Palayam",
-      "state": "Tamilnadu",
-      "city": "Erode",
-      "zip": "53432",
-      "id": 1
-    }
-  ]
+  "CheckoutDetails": []
 }

@@ -14,38 +14,46 @@ export const Signup = () => {
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [show, setShow] = useState("");
+  const [emailValid, setEmailValid] = useState("");
+  const [passwordValid, setPasswordValid] = useState("");
   const navigate = useNavigate();
   const validateForm = (email, password, name) => {
     if ((name == null) | (name == "")) {
-      setNameError("Please enter your name");
+      setNameError(" * Please enter your name");
+      // return true;
     }
     if ((email == null) | (email == "")) {
-      setEmailError("Please enter your email");
+      setEmailError(" * Please enter your email");
+      // return true;
     }
     if ((password == null) | (password == "")) {
-      setPasswordError("Please fill the password field");
-    }
-    if (
-      email.match(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/) &&
-      password.match(/^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/)
-    ) {
-      return false;
-    } else {
+      setPasswordError(" * Please fill the password field");
       return true;
+    } else if (!email.match(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/)) {
+      setEmailValid("Enter Valid Email id", "error");
+      return true;
+    } else if (!password.match(/^(?=.*[0-9])(?=.*[!@#$%*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%*]{9,16}$/)) {
+      setPasswordValid(
+        "Password should have minimum 9 characters with combination of uppercase, lowercase ,numbers and a special character '!@#$%*' ",
+        "error"
+      );
+      return true;
+    } else {
+      return false;
     }
   };
 
   const adduser = (e) => {
     e.preventDefault();
     if (validateForm(email, password, name)) {
-      Toast("Enter valid credentials", "error");
+      return;
     } else {
       const user = { name, email, password };
       Toast("Signup Successful", "success");
       ecomUrl
         .post("user", user)
         .then(() => {
-          navigate("/userlog");
+          navigate("/login");
         })
         .catch(() => {
           Toast("Server Error", "warning");
@@ -80,10 +88,11 @@ export const Signup = () => {
             data-testid="email-test"
             onChange={(e) => setEmail(e.target.value)}
             onClick={(e) => {
-              e.target.focus(setEmailError(null));
+              e.target.focus(setEmailError(null), setEmailValid(null));
             }}
           />
           <strong className="error-msg"> {emailError} </strong>
+          <strong className="error-msg"> {emailValid} </strong>
           <label> Password</label>
           <input
             type={show ? "text" : "password"}
@@ -93,27 +102,20 @@ export const Signup = () => {
             data-testid="password-test"
             onChange={(e) => setPassword(e.target.value)}
             onClick={(e) => {
-              e.target.focus(setPasswordError(null));
+              e.target.focus(setPasswordError(null), setPasswordValid(null));
             }}
           />
           <p onClick={() => setShow((prestate) => !prestate)}>
-            <i className="fa fa-eye fa-fw" id="togglePassword" aria-hidden="true">
-              {" "}
-            </i>
+            <i className="fa fa-eye fa-fw" id="togglePassword" aria-hidden="true"></i>
           </p>
           <strong className="error-msg"> {passwordError} </strong>
+          <strong className="error-msg"> {passwordValid} </strong>
           <button className="button" type="submit">
             SignUp
           </button>
-          <Link className="login" to="/Login">
+          <Link className="login" to="/login">
             <button className="button"> Login </button>
           </Link>
-          <ul className="instruction">
-            <li>
-              Password should have minimum 9 characters with combination of uppercase, lowercase ,numbers and a special
-              character !@#$%*
-            </li>
-          </ul>
         </form>
       </div>
     </>

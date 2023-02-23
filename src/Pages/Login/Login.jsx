@@ -24,31 +24,33 @@ export default function Login() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    ecomUrl
-      .get("user?email=" + useremail)
-      .then((res) => {
-        if (res.data[0].password == userpassword) {
-          sessionStorage.setItem("id", res.data[0].id);
-          sessionStorage.setItem("email", res.data[0].email);
-          Toast("Login Successful", "success");
-          navigate("/");
-        } else {
-          setError("Invalid credentials");
-          Toast("Please Enter Valid Credentials", "warning");
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
     CheckEmail();
     CheckPassword();
+    if (EmailValid(useremail) && PasswordValid(userpassword)) {
+      ecomUrl
+        .get("user?email=" + useremail)
+        .then((res) => {
+          if (res.data[0].password == userpassword) {
+            sessionStorage.setItem("id", res.data[0].id);
+            sessionStorage.setItem("email", res.data[0].email);
+            Toast("Login Successful", "success");
+            navigate("/");
+          } else {
+            setError("Enter the Correct Password");
+            // Toast("Please Enter Valid Credentials", "warning");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   };
 
   function CheckEmail() {
     if (!EmailValid(useremail)) {
       return setEmailError("Please enter valid email id");
     } else {
-      return setEmailError(" ");
+      return setEmailError("");
     }
   }
 
@@ -58,7 +60,7 @@ export default function Login() {
         "Password should have minimum 9 characters with combination of uppercase, lowercase ,numbers and a special character '!@#$%*' "
       );
     } else {
-      return setPasswordError(" ");
+      return setPasswordError("");
     }
   }
 
@@ -75,6 +77,9 @@ export default function Login() {
             value={useremail}
             data-testid="email-test"
             onChange={(e) => setUserEmail(e.target.value)}
+            onClick={(e) => {
+              e.target.focus(setEmailError(null));
+            }}
           />
           <strong className="error-msg"> {emailError} </strong>
 
@@ -86,6 +91,9 @@ export default function Login() {
             name="password"
             data-testid="password-test"
             onChange={(e) => setUserPassword(e.target.value)}
+            onClick={(e) => {
+              e.target.focus(setPasswordError(null));
+            }}
           />
           <p onClick={() => setShow((prestate) => !prestate)}>
             <i className="fa fa-eye fa-fw" id="togglePassword" aria-hidden="true"></i>

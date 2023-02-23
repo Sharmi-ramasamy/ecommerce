@@ -10,7 +10,7 @@ jest.mock("react-router-dom", () => ({
   useHref: () => mockedUsedNavigate,
 }));
 
-describe("<Signup />", () => {
+describe("<Login />", () => {
   test("render name input", () => {
     render(
       <MemoryRouter>
@@ -23,7 +23,7 @@ describe("<Signup />", () => {
   });
 });
 
-describe("<Signup />", () => {
+describe("<Login />", () => {
   test("render name input", () => {
     render(
       <MemoryRouter>
@@ -35,3 +35,11 @@ describe("<Signup />", () => {
     expect(inputElementPassword).toHaveAttribute("type", "password");
   });
 });
+{
+  /* <ul className="instruction">
+            <li>
+              Password should have minimum 9 characters with combination of uppercase, lowercase ,numbers and a special
+              character !@#$%*
+            </li>
+          </ul> */
+}

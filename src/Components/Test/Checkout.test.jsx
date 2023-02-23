@@ -10,7 +10,7 @@ jest.mock("react-router-dom", () => ({
   useHref: () => mockedUsedNavigate,
 }));
 
-describe("<Signup />", () => {
+describe("<Checkout />", () => {
   test("render name input", () => {
     render(
       <MemoryRouter>
@@ -23,7 +23,7 @@ describe("<Signup />", () => {
   });
 });
 
-describe("<Signup />", () => {
+describe("<Checkout />", () => {
   test("render name input", () => {
     render(
       <MemoryRouter>
@@ -36,7 +36,7 @@ describe("<Signup />", () => {
   });
 });
 
-describe("<Signup />", () => {
+describe("<Checkout />", () => {
   test("render name input", () => {
     render(
       <MemoryRouter>
@@ -49,7 +49,7 @@ describe("<Signup />", () => {
   });
 });
 
-describe("<Signup />", () => {
+describe("<Checkout />", () => {
   test("render name input", () => {
     render(
       <MemoryRouter>
@@ -62,7 +62,7 @@ describe("<Signup />", () => {
   });
 });
 
-describe("<Signup />", () => {
+describe("<Checkout />", () => {
   test("render name input", () => {
     render(
       <MemoryRouter>

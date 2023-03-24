@@ -1,25 +1,25 @@
 {
   "user": [
     {
-      "name": "ramkaviramas",
+      "name": "SharmiRamasamy",
       "email": "sharmi@gmail.com",
       "password": "Sharmi@123",
       "id": 0
     },
     {
-      "name": "SharmiRamasamy",
-      "email": "sharmiRam@gmail.com",
-      "password": "Sharmi#1221",
+      "name": "Sharmi",
+      "email": "sharmi@gmail.com",
+      "password": "Sharmi@123456",
       "id": 1
     },
     {
-      "name": "Abc",
-      "email": "Abc@gmail.com",
-      "password": "ABC123",
+      "name": "AspireSystems",
+      "email": "Aspire@gmail.com",
+      "password": "Aspire@123",
       "id": 2
     },
     {
-      "name": "ramasamy",
+      "name": "Ramasamy",
       "email": "Ramasamy@gmail.com",
       "password": "Ramasamy@1212",
       "id": 3
@@ -53,6 +53,24 @@
       "email": "Yazhini@gmail.com",
       "password": "Yazhini@123",
       "id": 8
+    },
+    {
+      "name": "Sharmi",
+      "email": "sharmi@gmail.com",
+      "password": "Sharmi@12345634",
+      "id": 9
+    },
+    {
+      "name": "SharmiRamasamy",
+      "email": "sharmi@gmail.com",
+      "password": "SharmiMAdhu@123",
+      "id": 10
+    },
+    {
+      "name": "sharmiramasamy",
+      "email": "sharmi@gmail.com",
+      "password": "Asharmi!2345",
+      "id": 11
     }
   ],
   "Category": [

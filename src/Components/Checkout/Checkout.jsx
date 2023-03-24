@@ -49,7 +49,7 @@ export const Checkout = () => {
     if ((zip == null) | (zip == "")) {
       setZipError(" * Please enter your zipcode");
       return true;
-    } else if (!name.match(/^[a-zA-Z]{3,20}$/)) {
+    } else if (!name.match(/^[a-zA-Z]$/)) {
       setValidName(" * Name should contain combination of uppercase and lowercase");
       return true;
     } else if (!email.match(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/)) {

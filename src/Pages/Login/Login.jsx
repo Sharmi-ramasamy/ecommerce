@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Signup/Form.css";
@@ -7,9 +8,10 @@ import Toast from "../../Components/Toast/Toast";
 
 export default function Login() {
   const navigate = useNavigate();
-  const [useremail, setUserEmail] = useState("");
-  const [userpassword, setUserPassword] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userPassword, setUserPassword] = useState("");
   const [error, setError] = useState("");
+  const [errors, setErrors] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [show, setShow] = useState("");
@@ -19,35 +21,38 @@ export default function Login() {
     return emailRegex.test(email);
   };
   const PasswordValid = (password) => {
-    const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%*])([a-zA-Z0-9!@#$%*]{9,20})$/;
+    const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%*])(?=.*[A-Z])([a-zA-Z0-9!@#$%*]{9,20})$/;
     return passwordRegex.test(password);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
     CheckEmail();
     CheckPassword();
-    if (EmailValid(useremail) && PasswordValid(userpassword)) {
+    if (EmailValid(userEmail) && PasswordValid(userPassword)) {
       ecomUrl
-        .get("user?email=" + useremail)
+        .get("user?email=" + userEmail)
         .then((res) => {
-          if (res.data[0].password == userpassword) {
+          if (res.data[0].email == userEmail && res.data[0].password == userPassword) {
             sessionStorage.setItem("id", res.data[0].id);
             sessionStorage.setItem("email", res.data[0].email);
             Toast("Login Successful", "success");
             navigate("/");
-          } else {
-            setError("Enter the Correct Password");
-            // Toast("Please Enter Valid Credentials", "warning");
+            // } else if (res.data[0].email !== userEmail) {
+            //   setErrors("Enter the Correct Email");
+          } else if (res.data[0].password != userPassword) {
+            Toast("Invalid Password", "error");
           }
         })
         .catch((err) => {
-          console.log(err);
+          Toast("Invalid Email", "error", err);
+          // console.log(err);
+          // setErrors("Enter the Correct Email", err);
         });
     }
   };
 
   function CheckEmail() {
-    if (!EmailValid(useremail)) {
+    if (!EmailValid(userEmail)) {
       return setEmailError("Please enter valid email id");
     } else {
       return setEmailError("");
@@ -55,9 +60,9 @@ export default function Login() {
   }
 
   function CheckPassword() {
-    if (!PasswordValid(userpassword)) {
+    if (!PasswordValid(userPassword)) {
       return setPasswordError(
-        "Password should have minimum 9 characters with combination of uppercase, lowercase ,numbers and a special character '!@#$%*' "
+        "Password should have 9-20 characters with combination of uppercase, lowercase ,numbers and a special character '!@#$%*' "
       );
     } else {
       return setPasswordError("");
@@ -74,25 +79,26 @@ export default function Login() {
             type="text"
             placeholder="Enter Email Id "
             name="email"
-            value={useremail}
+            value={userEmail}
             data-testid="email-test"
             onChange={(e) => setUserEmail(e.target.value)}
             onClick={(e) => {
-              e.target.focus(setEmailError(null));
+              e.target.focus(setEmailError(null), setErrors(null));
             }}
           />
           <strong className="error-msg"> {emailError} </strong>
+          {error && <p style={{ color: "red" }}> {errors} </p>}
 
           <label> Password</label>
           <input
             type={show ? "text" : "password"}
-            value={userpassword}
+            value={userPassword}
             placeholder="Enter password"
             name="password"
             data-testid="password-test"
             onChange={(e) => setUserPassword(e.target.value)}
             onClick={(e) => {
-              e.target.focus(setPasswordError(null));
+              e.target.focus(setPasswordError(null), setError(null));
             }}
           />
           <p onClick={() => setShow((prestate) => !prestate)}>

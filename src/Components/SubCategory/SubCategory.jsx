@@ -50,7 +50,7 @@ export const SubCategory = () => {
             })
             .map((val) => (
               <div key={val.id}>
-                <button id="buttons" onClick={() => navigate(`/category/${categoryName}/${val.subcategory}`)}>
+                <button id="buttons" onClick={() => navigate(`/category/category=${categoryName}/${val.subcategory}`)}>
                   {val.subcategory}
                 </button>
               </div>

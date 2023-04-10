@@ -52,3 +52,19 @@
   vertical-align: super;
   color: red;
 }
+
+#back-btn {
+  border: none;
+  height: 40px;
+  width: 40px;
+  font-size: 18px;
+  color: white;
+  background-color: #0f3460;
+  text-transform: uppercase;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+#back-btn:hover {
+  color: crimson;
+}
